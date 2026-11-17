@@ -1,0 +1,112 @@
+[
+  {
+    "method": "CREDIT_CARD",
+    "details": {
+      "cardNumber": "4111 2222 3333 4444",
+      "cardName": "John Doe",
+      "cvv": "123",
+      "expiry": "12/2030"
+    },
+    "valid": true
+  },
+  {
+    "method": "DEBIT_CARD",
+    "details": {
+      "cardNumber": "5555-6666-7777-8888",
+      "cardName": "Alice Smith",
+      "cvv": "987",
+      "expiry": "06/2028"
+    },
+    "valid": true
+  },
+  {
+    "method": "CREDIT_CARD",
+    "details": {
+      "cardNumber": "12345",
+      "cardName": "John Doe",
+      "cvv": "123",
+      "expiry": "12/2030"
+    },
+    "valid": false,
+    "field": "payment.cardNumber",
+    "reason": "FORMAT"
+  },
+  {
+    "method": "CREDIT_CARD",
+    "details": {
+      "cardNumber": "4111 2222 3333 4444",
+      "cardName": "J",
+      "cvv": "123",
+      "expiry": "12/2030"
+    },
+    "valid": false,
+    "field": "payment.cardName",
+    "reason": "RANGE"
+  },
+  {
+    "method": "CREDIT_CARD",
+    "details": {
+      "cardNumber": "4111 2222 3333 4444",
+      "cardName": "John Doe",
+      "cvv": "12",
+      "expiry": "12/2030"
+    },
+    "valid": false,
+    "field": "payment.cvv",
+    "reason": "FORMAT"
+  },
+  {
+    "method": "CREDIT_CARD",
+    "details": {
+      "cardNumber": "4111 2222 3333 4444",
+      "cardName": "John Doe",
+      "cvv": "123",
+      "expiry": "01/2020"
+    },
+    "valid": false,
+    "field": "payment.expiry",
+    "reason": "EXPIRED"
+  },
+  {
+    "method": "UPI",
+    "details": {
+      "upiId": "user@okaxis"
+    },
+    "valid": true
+  },
+  {
+    "method": "UPI",
+    "details": {
+      "upiId": "invalid-upi"
+    },
+    "valid": false,
+    "field": "payment.upiId",
+    "reason": "FORMAT"
+  },
+  {
+    "method": "NET_BANKING",
+    "details": {
+      "bankCode": "HDFC"
+    },
+    "valid": true
+  },
+  {
+    "method": "NET_BANKING",
+    "details": {
+      "bankCode": "UNKNOWN_BANK"
+    },
+    "valid": false,
+    "field": "payment.bankCode",
+    "reason": "FORMAT"
+  },
+  {
+    "method": "WALLET",
+    "details": {},
+    "valid": true
+  },
+  {
+    "method": "COD",
+    "details": {},
+    "valid": true
+  }
+]

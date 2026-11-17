@@ -1,0 +1,1228 @@
+openapi: 3.0.3
+info:
+  title: Book Haven Online Bookstore API
+  version: 1.0.0
+  description: |
+    Handwritten source of truth for the Book Haven backend (constitution principle I).
+    Every operation lists the spec requirement IDs it satisfies in `x-requirements` (FR-xxx IDs
+    from specs/001-book-haven-bookstore/spec.md) and its delivery tier in `x-tier`
+    (1 = build and verify first, 2 = optional extras).
+
+    Every JSON response uses the envelope `{ success, data, message, code }`.
+
+    Status codes (FR-074a): 400 is the only status for validation errors; 401 not logged in or
+    wrong credentials; 402 payment declined; 403 another member's data; 404 not found;
+    409 state conflicts; 500 unexpected (fixed message, never exception text).
+
+    The contract test `OpenApiContractTest` fails the build when routes in code and in this file
+    disagree, when a $ref does not resolve, when an operation lacks `operationId`, `summary`,
+    `x-tier` or valid `x-requirements`, or when any operation documents 422.
+servers:
+  - url: http://127.0.0.1:5000
+tags:
+  - {name: Auth}
+  - {name: Catalogue}
+  - {name: Recommendations}
+  - {name: Delivery}
+  - {name: Cart}
+  - {name: Addresses}
+  - {name: Checkout}
+  - {name: Orders}
+  - {name: Wallet}
+  - {name: Wishlist}
+  - {name: Writers}
+  - {name: Library}
+security:
+  - bearerAuth: []
+paths:
+  # ------------------------------------------------------------------ Auth
+  /api/auth/register:
+    post:
+      tags: [Auth]
+      summary: Register a new member
+      operationId: register
+      security: []
+      x-tier: 1
+      x-requirements: [FR-001, FR-074a]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/RegisterRequest'}}}}
+      responses:
+        '200': {description: Registered and logged in, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/AuthResponse'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/auth/login:
+    post:
+      tags: [Auth]
+      summary: Log in and receive a JWT
+      operationId: login
+      security: []
+      x-tier: 1
+      x-requirements: [FR-002, FR-003]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/LoginRequest'}}}}
+      responses:
+        '200': {description: Logged in, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/AuthResponse'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/auth/logout:
+    post:
+      tags: [Auth]
+      summary: Log out (stateless; the client discards the token)
+      operationId: logout
+      security: []
+      x-tier: 1
+      x-requirements: [FR-002]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/auth/me:
+    get:
+      tags: [Auth]
+      summary: Current member with gift points and wallet balance
+      operationId: me
+      x-tier: 1
+      x-requirements: [FR-006, FR-020]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Member'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    patch:
+      tags: [Auth]
+      summary: Update the member's name
+      operationId: updateProfile
+      x-tier: 2
+      x-requirements: [FR-066]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/UpdateProfileRequest'}}}}
+      responses:
+        '200': {description: Updated, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Member'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/auth/points-history:
+    get:
+      tags: [Auth]
+      summary: Gift points history
+      operationId: pointsHistory
+      x-tier: 2
+      x-requirements: [FR-065]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/GiftPointsEntry'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Catalogue
+  /api/categories:
+    get:
+      tags: [Catalogue]
+      summary: List categories
+      operationId: listCategories
+      security: []
+      x-tier: 1
+      x-requirements: [FR-010]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Category'}}}}]}}}}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/categories/{slug}/products:
+    get:
+      tags: [Catalogue]
+      summary: Books in a category
+      operationId: listCategoryBooks
+      security: []
+      x-tier: 1
+      x-requirements: [FR-010, FR-012]
+      parameters:
+        - {name: slug, in: path, required: true, schema: {type: string}}
+        - {$ref: '#/components/parameters/Page'}
+        - {$ref: '#/components/parameters/Limit'}
+        - {$ref: '#/components/parameters/Sort'}
+        - {$ref: '#/components/parameters/Search'}
+        - {$ref: '#/components/parameters/Language'}
+        - {$ref: '#/components/parameters/Format'}
+        - {$ref: '#/components/parameters/Price'}
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/BookPage'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/brands:
+    get:
+      tags: [Catalogue]
+      summary: List brands
+      operationId: listBrands
+      security: []
+      x-tier: 1
+      x-requirements: [FR-010]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Brand'}}}}]}}}}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/brands/{slug}/products:
+    get:
+      tags: [Catalogue]
+      summary: Books of a brand
+      operationId: listBrandBooks
+      security: []
+      x-tier: 1
+      x-requirements: [FR-010, FR-012]
+      parameters:
+        - {name: slug, in: path, required: true, schema: {type: string}}
+        - {$ref: '#/components/parameters/Page'}
+        - {$ref: '#/components/parameters/Limit'}
+        - {$ref: '#/components/parameters/Sort'}
+        - {$ref: '#/components/parameters/Category'}
+        - {$ref: '#/components/parameters/Search'}
+        - {$ref: '#/components/parameters/Language'}
+        - {$ref: '#/components/parameters/Format'}
+        - {$ref: '#/components/parameters/Price'}
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/BookPage'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/products:
+    get:
+      tags: [Catalogue]
+      summary: Search and filter books (paginated)
+      operationId: listBooks
+      security: []
+      x-tier: 1
+      x-requirements: [FR-010, FR-011, FR-012, FR-013]
+      parameters:
+        - {$ref: '#/components/parameters/Page'}
+        - {$ref: '#/components/parameters/Limit'}
+        - {$ref: '#/components/parameters/Sort'}
+        - {$ref: '#/components/parameters/Category'}
+        - {$ref: '#/components/parameters/Brand'}
+        - {$ref: '#/components/parameters/Search'}
+        - {$ref: '#/components/parameters/Language'}
+        - {$ref: '#/components/parameters/Format'}
+        - {$ref: '#/components/parameters/Price'}
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/BookPage'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/products/{id}:
+    get:
+      tags: [Catalogue]
+      summary: Book detail with stock, delivery date, sold count and about the writer
+      operationId: getBook
+      security: []
+      x-tier: 1
+      x-requirements: [FR-013, FR-014, FR-016]
+      parameters:
+        - {$ref: '#/components/parameters/BookId'}
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/BookDetail'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/products/{id}/related:
+    get:
+      tags: [Catalogue]
+      summary: Related reads (same author first, then same category, up to 6)
+      operationId: relatedBooks
+      security: []
+      x-tier: 1
+      x-requirements: [FR-014, FR-014a]
+      parameters:
+        - {$ref: '#/components/parameters/BookId'}
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/BookSummary'}}}}]}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/products/{id}/notify-me:
+    post:
+      tags: [Catalogue]
+      summary: Ask to be told when an out-of-stock book is back
+      operationId: notifyMe
+      x-tier: 1
+      x-requirements: [FR-015, FR-004]
+      parameters:
+        - {$ref: '#/components/parameters/BookId'}
+      responses:
+        '200': {description: Recorded, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/products/{id}/reviews:
+    get:
+      tags: [Catalogue]
+      summary: List reviews of a book
+      operationId: listReviews
+      security: []
+      x-tier: 2
+      x-requirements: [FR-063]
+      parameters:
+        - {$ref: '#/components/parameters/BookId'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Review'}}}}]}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Catalogue]
+      summary: Review a book (one per member per book)
+      operationId: createReview
+      x-tier: 2
+      x-requirements: [FR-063]
+      parameters:
+        - {$ref: '#/components/parameters/BookId'}
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/ReviewRequest'}}}}
+      responses:
+        '200': {description: Created, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Review'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/recommendations:
+    get:
+      tags: [Recommendations]
+      summary: Recommended for You (order and wishlist based; top sellers for guests)
+      operationId: recommendations
+      security: [{}, {bearerAuth: []}]
+      x-tier: 1
+      x-requirements: [FR-011, FR-011a]
+      parameters:
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/BookSummary'}}}}]}}}}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Delivery
+  /api/delivery/estimate:
+    get:
+      tags: [Delivery]
+      summary: Pincode serviceability and delivery date for physical books
+      operationId: estimateDelivery
+      security: []
+      x-tier: 1
+      x-requirements: [FR-014, FR-024, FR-072]
+      parameters:
+        - {$ref: '#/components/parameters/PincodeRequired'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/DeliveryEstimate'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Cart
+  /api/cart:
+    get:
+      tags: [Cart]
+      summary: Current cart with server-calculated totals
+      operationId: getCart
+      x-tier: 1
+      x-requirements: [FR-032, FR-033, FR-034, FR-072]
+      parameters:
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Cart'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Cart]
+      summary: Clear the cart
+      operationId: clearCart
+      x-tier: 1
+      x-requirements: [FR-030]
+      responses:
+        '200': {description: Cleared, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Cart'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/cart/items:
+    post:
+      tags: [Cart]
+      summary: Add a book to the cart (limited by stock)
+      operationId: addCartItem
+      x-tier: 1
+      x-requirements: [FR-004, FR-030, FR-031]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/AddCartItemRequest'}}}}
+      responses:
+        '200': {description: Updated cart, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Cart'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/cart/items/{id}:
+    patch:
+      tags: [Cart]
+      summary: Change a cart item quantity (0 removes it)
+      operationId: updateCartItem
+      x-tier: 1
+      x-requirements: [FR-030, FR-031]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/UpdateQuantityRequest'}}}}
+      responses:
+        '200': {description: Updated cart, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Cart'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Cart]
+      summary: Remove an item from the cart
+      operationId: removeCartItem
+      x-tier: 1
+      x-requirements: [FR-030]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: Updated cart, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Cart'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Addresses
+  /api/addresses:
+    get:
+      tags: [Addresses]
+      summary: List saved delivery addresses (default first)
+      operationId: listAddresses
+      x-tier: 1
+      x-requirements: [FR-036, FR-037]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Address'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Addresses]
+      summary: Create a delivery address
+      operationId: createAddress
+      x-tier: 1
+      x-requirements: [FR-037, FR-040, FR-066]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/AddressRequest'}}}}
+      responses:
+        '200': {description: Created, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Address'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/addresses/{id}:
+    patch:
+      tags: [Addresses]
+      summary: Update an address or make it the default
+      operationId: updateAddress
+      x-tier: 1
+      x-requirements: [FR-036, FR-037, FR-066]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/AddressRequest'}}}}
+      responses:
+        '200': {description: Updated, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Address'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Addresses]
+      summary: Delete an address (soft delete; past orders keep their snapshot)
+      operationId: deleteAddress
+      x-tier: 1
+      x-requirements: [FR-066]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: Deleted, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Checkout
+  /api/checkout/validate:
+    post:
+      tags: [Checkout]
+      summary: Check that the cart can be checked out (not empty, all items available)
+      operationId: validateCheckout
+      x-tier: 1
+      x-requirements: [FR-040, FR-046]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Cart'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/checkout/banks:
+    get:
+      tags: [Checkout]
+      summary: Fixed list of banks offered for Net Banking
+      operationId: listBanks
+      x-tier: 1
+      x-requirements: [FR-041, FR-043]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Bank'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/checkout/apply-points:
+    post:
+      tags: [Checkout]
+      summary: Preview the discount and payable amount for redeeming gift points (10 points = 1 rupee)
+      operationId: applyPoints
+      x-tier: 1
+      x-requirements: [FR-045, FR-072]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/ApplyPointsRequest'}}}}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/ApplyPointsResult'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/checkout/order:
+    post:
+      tags: [Checkout]
+      summary: Create a PENDING order from the cart (reserves stock, deducts points)
+      operationId: createOrder
+      x-tier: 1
+      x-requirements: [FR-040, FR-042, FR-044, FR-045, FR-046, FR-046a, FR-049]
+      parameters:
+        - {name: Idempotency-Key, in: header, required: true, schema: {type: string, minLength: 8, maxLength: 64}}
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/CreateOrderRequest'}}}}
+      responses:
+        '200': {description: Order created (or the same order, if the key was already used), content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Order'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/checkout/confirm-payment:
+    post:
+      tags: [Checkout]
+      summary: Validate payment details and pay; the order becomes CONFIRMED
+      operationId: confirmPayment
+      x-tier: 1
+      x-requirements: [FR-041, FR-043, FR-043a, FR-044, FR-046, FR-047, FR-048, FR-049]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/ConfirmPaymentRequest'}}}}
+      responses:
+        '200': {description: Paid; pointsEarned is the server's value, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Order'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '402': {$ref: '#/components/responses/PaymentDeclined'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/checkout/fail-payment:
+    post:
+      tags: [Checkout]
+      summary: Abandon or fail a payment; stock and redeemed points are restored
+      operationId: failPayment
+      x-tier: 1
+      x-requirements: [FR-046, FR-046a]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/FailPaymentRequest'}}}}
+      responses:
+        '200': {description: Released, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Order'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Orders
+  /api/orders:
+    get:
+      tags: [Orders]
+      summary: Order history, newest first (CONFIRMED and later only)
+      operationId: listOrders
+      x-tier: 1
+      x-requirements: [FR-050]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Order'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/orders/{id}:
+    get:
+      tags: [Orders]
+      summary: One of the member's own orders
+      operationId: getOrder
+      x-tier: 1
+      x-requirements: [FR-005, FR-051]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Order'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/orders/{id}/buy-again:
+    post:
+      tags: [Orders]
+      summary: Add a past order's items to the cart and report unavailable ones
+      operationId: buyAgain
+      x-tier: 1
+      x-requirements: [FR-052]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/BuyAgainResult'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/orders/{id}/cancel-preview:
+    get:
+      tags: [Orders]
+      summary: Preview fee, refund and points restored for a cancellation
+      operationId: cancelPreview
+      x-tier: 1
+      x-requirements: [FR-053, FR-054, FR-055, FR-057, FR-058, FR-059]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: items, in: query, required: false, description: 'Repeat as items=<orderItemId>:<quantity>. Omit to preview a full cancellation.', style: form, explode: true, schema: {type: array, items: {type: string}}}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/CancelPreview'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/orders/{id}/cancel:
+    post:
+      tags: [Orders]
+      summary: Cancel an order within 48 hours, fully or partially
+      operationId: cancelOrder
+      x-tier: 1
+      x-requirements: [FR-053, FR-054, FR-055, FR-056, FR-057, FR-058, FR-059]
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/CancelRequest'}}}}
+      responses:
+        '200': {description: Cancelled, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Order'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Wallet
+  /api/wallet:
+    get:
+      tags: [Wallet]
+      summary: Wallet balance and transactions, newest first
+      operationId: getWallet
+      x-tier: 2
+      x-requirements: [FR-060]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Wallet'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/wallet/topup:
+    post:
+      tags: [Wallet]
+      summary: Add 1 to 100000 rupees to the wallet
+      operationId: topUpWallet
+      x-tier: 2
+      x-requirements: [FR-060, FR-043]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/TopUpRequest'}}}}
+      responses:
+        '200': {description: Credited, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/Wallet'}}}]}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '402': {$ref: '#/components/responses/PaymentDeclined'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Wishlist
+  /api/wishlist:
+    get:
+      tags: [Wishlist]
+      summary: List the wishlist
+      operationId: listWishlist
+      x-tier: 2
+      x-requirements: [FR-061]
+      parameters:
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/BookSummary'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Wishlist]
+      summary: Add a book to the wishlist
+      operationId: addWishlistItem
+      x-tier: 2
+      x-requirements: [FR-061]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/WishlistRequest'}}}}
+      responses:
+        '200': {description: Added, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/wishlist/{bookId}:
+    delete:
+      tags: [Wishlist]
+      summary: Remove a book from the wishlist
+      operationId: removeWishlistItem
+      x-tier: 2
+      x-requirements: [FR-061]
+      parameters:
+        - {name: bookId, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: Removed, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Writers
+  /api/authors:
+    get:
+      tags: [Writers]
+      summary: Browse writers
+      operationId: listAuthors
+      security: []
+      x-tier: 2
+      x-requirements: [FR-062]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Author'}}}}]}}}}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/authors/{slug}:
+    get:
+      tags: [Writers]
+      summary: Writer profile with books
+      operationId: getAuthor
+      security: []
+      x-tier: 2
+      x-requirements: [FR-062]
+      parameters:
+        - {name: slug, in: path, required: true, schema: {type: string}}
+        - {$ref: '#/components/parameters/Pincode'}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/AuthorProfile'}}}]}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/following:
+    get:
+      tags: [Writers]
+      summary: Writers the member follows
+      operationId: listFollowing
+      x-tier: 2
+      x-requirements: [FR-062]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/Author'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Writers]
+      summary: Follow a writer
+      operationId: followAuthor
+      x-tier: 2
+      x-requirements: [FR-062]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/FollowRequest'}}}}
+      responses:
+        '200': {description: Following, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '400': {$ref: '#/components/responses/ValidationFailed'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/following/{slug}:
+    delete:
+      tags: [Writers]
+      summary: Unfollow a writer
+      operationId: unfollowAuthor
+      x-tier: 2
+      x-requirements: [FR-062]
+      parameters:
+        - {name: slug, in: path, required: true, schema: {type: string}}
+      responses:
+        '200': {description: Unfollowed, content: {application/json: {schema: {$ref: '#/components/schemas/ApiResponse'}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  # ------------------------------------------------------------------ Library
+  /api/library:
+    get:
+      tags: [Library]
+      summary: Purchased eBooks and audiobooks
+      operationId: listLibrary
+      x-tier: 2
+      x-requirements: [FR-064]
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {type: array, items: {$ref: '#/components/schemas/LibraryEntry'}}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/library/{bookId}/content:
+    get:
+      tags: [Library]
+      summary: Readable chapters of a purchased eBook
+      operationId: readLibraryBook
+      x-tier: 2
+      x-requirements: [FR-064]
+      parameters:
+        - {name: bookId, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: OK, content: {application/json: {schema: {allOf: [{$ref: '#/components/schemas/ApiResponse'}, {properties: {data: {$ref: '#/components/schemas/ReaderContent'}}}]}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/library/{bookId}/audio:
+    get:
+      tags: [Library]
+      summary: Stream a purchased audiobook (placeholder audio)
+      operationId: streamLibraryAudio
+      x-tier: 2
+      x-requirements: [FR-064]
+      parameters:
+        - {name: bookId, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: Audio stream, content: {audio/wav: {schema: {type: string, format: binary}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/library/{bookId}/download:
+    get:
+      tags: [Library]
+      summary: Download a purchased eBook or audiobook
+      operationId: downloadLibraryBook
+      x-tier: 2
+      x-requirements: [FR-064]
+      parameters:
+        - {name: bookId, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: File, content: {application/octet-stream: {schema: {type: string, format: binary}}}}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+components:
+  securitySchemes:
+    bearerAuth: {type: http, scheme: bearer, bearerFormat: JWT}
+  parameters:
+    Page: {name: page, in: query, schema: {type: integer, minimum: 1, default: 1}}
+    Limit: {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 48, default: 12}}
+    Sort: {name: sort, in: query, description: 'Empty means relevance.', schema: {type: string, enum: [price_asc, price_desc, rating_desc, bestselling, newest]}}
+    Category: {name: category, in: query, schema: {type: string}}
+    Brand: {name: brand, in: query, schema: {type: string}}
+    Search: {name: search, in: query, schema: {type: string, maxLength: 100}}
+    Language: {name: language, in: query, schema: {type: string, enum: [English, Hindi, Tamil, Telugu, Kannada]}}
+    Format: {name: format, in: query, schema: {$ref: '#/components/schemas/BookFormat'}}
+    Price: {name: price, in: query, schema: {type: string, enum: [under-300, 300-600, 600-1000, above-1000]}}
+    Pincode: {name: pincode, in: query, required: false, description: 'Delivery pincode used to compute delivery dates; defaults to the platform default.', schema: {type: string, pattern: '^[1-9][0-9]{5}$'}}
+    PincodeRequired: {name: pincode, in: query, required: true, schema: {type: string, pattern: '^[1-9][0-9]{5}$'}}
+    BookId: {name: id, in: path, required: true, schema: {type: string, format: uuid}}
+  responses:
+    ValidationFailed: {description: 'Validation error. The only status used for validation errors (FR-074a).', content: {application/json: {schema: {$ref: '#/components/schemas/ValidationErrorEnvelope'}}}}
+    Unauthorized: {description: 'Not logged in, bad token, or wrong credentials', content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    PaymentDeclined: {description: 'The simulated gateway declined the payment; stock and points are restored', content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    Forbidden: {description: 'The resource belongs to another member or has not been purchased', content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    NotFound: {description: Not found (also returned for another member's order so existence is not revealed), content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    Conflict: {description: 'State conflict such as duplicate email, insufficient stock or a closed cancellation window', content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    InternalError: {description: 'Unexpected error; fixed message, no details', content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+  schemas:
+    ApiResponse:
+      type: object
+      required: [success]
+      properties:
+        success: {type: boolean}
+        data: {nullable: true, description: Payload; shape depends on the operation}
+        message: {type: string, nullable: true}
+        code: {allOf: [{$ref: '#/components/schemas/ErrorCode'}], nullable: true}
+    ErrorEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/ApiResponse'
+        - type: object
+          properties:
+            success: {type: boolean, enum: [false]}
+            code: {$ref: '#/components/schemas/ErrorCode'}
+    ValidationErrorEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/ErrorEnvelope'
+        - type: object
+          properties:
+            code: {type: string, enum: [VALIDATION_ERROR]}
+            data:
+              type: object
+              properties:
+                fieldErrors: {type: array, items: {$ref: '#/components/schemas/FieldError'}}
+    FieldError:
+      type: object
+      required: [field, message]
+      properties:
+        field: {type: string, description: 'JSON path of the field, for example payment.cvv'}
+        message: {type: string}
+        reason: {type: string, enum: [REQUIRED, FORMAT, RANGE, EXPIRED, INSUFFICIENT_POINTS, COD_NOT_AVAILABLE, ADDRESS_REQUIRED, INVALID_AMOUNT, NOT_SERVICEABLE]}
+    ErrorCode:
+      type: string
+      description: Stable. Never renamed without a spec change.
+      enum: [VALIDATION_ERROR, UNAUTHORIZED, INVALID_CREDENTIALS, PAYMENT_DECLINED, FORBIDDEN, NOT_FOUND, DUPLICATE_EMAIL, DUPLICATE_REVIEW, ALREADY_NOTIFIED, INSUFFICIENT_STOCK, PRODUCT_UNAVAILABLE, EMPTY_CART, INSUFFICIENT_WALLET_BALANCE, CANNOT_CANCEL, REFUND_CHANGED, ORDER_EXPIRED, INTERNAL_ERROR]
+    BookFormat: {type: string, enum: [PAPERBACK, HARDCOVER, EBOOK, AUDIOBOOK]}
+    OrderStatus: {type: string, enum: [PENDING, CONFIRMED, PROCESSING, SHIPPED, DELIVERED, CANCELLED, FAILED]}
+    PaymentMethod: {type: string, enum: [CREDIT_CARD, DEBIT_CARD, UPI, NET_BANKING, WALLET, COD]}
+    # ---- auth
+    RegisterRequest:
+      type: object
+      required: [fullName, email, password]
+      properties:
+        fullName: {type: string, minLength: 2, maxLength: 100}
+        email: {type: string, format: email, maxLength: 254}
+        password: {type: string, minLength: 6, maxLength: 72, format: password}
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: {type: string, format: email}
+        password: {type: string, format: password}
+    UpdateProfileRequest:
+      type: object
+      required: [fullName]
+      properties:
+        fullName: {type: string, minLength: 2, maxLength: 100}
+    AuthResponse:
+      type: object
+      required: [token, member]
+      properties:
+        token: {type: string}
+        member: {$ref: '#/components/schemas/Member'}
+    Member:
+      type: object
+      required: [id, fullName, email, giftPoints, walletBalance]
+      properties:
+        id: {type: string, format: uuid}
+        fullName: {type: string}
+        email: {type: string, format: email}
+        giftPoints: {type: integer, minimum: 0}
+        walletBalance: {type: number, format: double, minimum: 0}
+    GiftPointsEntry:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        points: {type: integer, description: Signed}
+        reason: {type: string, enum: [REDEEMED, EARNED, RESTORED_ON_FAILURE, RESTORED_ON_CANCEL]}
+        orderId: {type: string, format: uuid, nullable: true}
+        createdAt: {type: string, format: date-time}
+        balanceAfter: {type: integer}
+    # ---- catalogue
+    Category:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string}
+        slug: {type: string}
+    Brand:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string}
+        slug: {type: string}
+        logoUrl: {type: string, nullable: true}
+    Author:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        name: {type: string}
+        slug: {type: string}
+        imageUrl: {type: string, nullable: true}
+        following: {type: boolean, description: 'True only when the caller is logged in and follows the writer'}
+    AuthorProfile:
+      allOf:
+        - $ref: '#/components/schemas/Author'
+        - type: object
+          properties:
+            bio: {type: string}
+            books: {type: array, items: {$ref: '#/components/schemas/BookSummary'}}
+    BookSummary:
+      type: object
+      description: Everything a book tile shows (FR-013). All amounts and dates are server-calculated.
+      required: [id, title, author, format, price, unitPrice, inStock]
+      properties:
+        id: {type: string, format: uuid}
+        slug: {type: string}
+        title: {type: string}
+        author: {type: object, properties: {name: {type: string}, slug: {type: string}}}
+        category: {$ref: '#/components/schemas/Category'}
+        format: {$ref: '#/components/schemas/BookFormat'}
+        language: {type: string}
+        coverImageUrl: {type: string}
+        price: {type: number, format: double, description: List price}
+        discountPercent: {type: number, format: double}
+        unitPrice: {type: number, format: double, description: Price after discount}
+        inStock: {type: boolean}
+        rating: {type: number, format: double}
+        reviewCount: {type: integer}
+        deliveryDate: {type: string, format: date, nullable: true, description: Null for digital formats}
+        cartQuantity: {type: integer, nullable: true, description: 'Quantity already in the logged-in member cart; null for guests'}
+        inWishlist: {type: boolean, nullable: true}
+        description: {type: string, nullable: true, description: Short blurb shown on the home page tile}
+    BookDetail:
+      allOf:
+        - $ref: '#/components/schemas/BookSummary'
+        - type: object
+          properties:
+            description: {type: string}
+            isbn: {type: string, nullable: true}
+            brand: {$ref: '#/components/schemas/Brand'}
+            stockStatus: {type: string, enum: [IN_STOCK, LOW_STOCK, OUT_OF_STOCK, DIGITAL]}
+            soldCount: {type: integer}
+            writer: {$ref: '#/components/schemas/AuthorProfile'}
+            notifyRequested: {type: boolean, nullable: true}
+    BookPage:
+      type: object
+      required: [items, total, page, limit, totalPages]
+      properties:
+        items: {type: array, items: {$ref: '#/components/schemas/BookSummary'}}
+        total: {type: integer}
+        page: {type: integer}
+        limit: {type: integer}
+        totalPages: {type: integer}
+    Review:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        memberName: {type: string}
+        rating: {type: integer, minimum: 1, maximum: 5}
+        body: {type: string, maxLength: 100}
+        createdAt: {type: string, format: date-time}
+    ReviewRequest:
+      type: object
+      required: [rating, body]
+      properties:
+        rating: {type: integer, minimum: 1, maximum: 5}
+        body: {type: string, minLength: 1, maxLength: 100}
+    DeliveryEstimate:
+      type: object
+      required: [pincode]
+      properties:
+        pincode: {type: string}
+        deliveryDate: {type: string, format: date, nullable: true, description: Null for digital items only}
+        message: {type: string}
+    # ---- cart
+    Cart:
+      type: object
+      required: [items, subtotal, shippingAmount, total, pointsToEarn]
+      properties:
+        items: {type: array, items: {$ref: '#/components/schemas/CartItem'}}
+        itemCount: {type: integer}
+        hasPhysical: {type: boolean}
+        hasDigital: {type: boolean}
+        subtotal: {type: number, format: double}
+        shippingAmount: {type: number, format: double, description: '49 for physical orders under 500, otherwise 0'}
+        freeShippingThreshold: {type: number, format: double, example: 500}
+        freeShippingRemaining: {type: number, format: double}
+        total: {type: number, format: double}
+        pointsToEarn: {type: integer, description: 'floor(total / 10); a hint, the confirmed value comes from the order'}
+        defaultAddressId: {type: string, format: uuid, nullable: true}
+    CartItem:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        book: {$ref: '#/components/schemas/BookSummary'}
+        quantity: {type: integer, minimum: 1}
+        maxQuantity: {type: integer, description: 'Stock limit for physical books; 10 for digital'}
+        lineTotal: {type: number, format: double}
+    AddCartItemRequest:
+      type: object
+      required: [bookId, quantity]
+      properties:
+        bookId: {type: string, format: uuid}
+        quantity: {type: integer, minimum: 1, maximum: 10}
+    UpdateQuantityRequest:
+      type: object
+      required: [quantity]
+      properties:
+        quantity: {type: integer, minimum: 0, maximum: 10, description: '0 removes the item'}
+    # ---- addresses
+    Address:
+      allOf:
+        - $ref: '#/components/schemas/AddressRequest'
+        - type: object
+          required: [id]
+          properties:
+            id: {type: string, format: uuid}
+    AddressRequest:
+      type: object
+      required: [label, recipientName, phone, line1, city, state, postalCode]
+      properties:
+        label: {type: string, enum: [HOME, OFFICE, OTHER]}
+        recipientName: {type: string, minLength: 2, maxLength: 100}
+        phone: {type: string, pattern: '^[0-9]{10}$'}
+        line1: {type: string, minLength: 1, maxLength: 120}
+        line2: {type: string, maxLength: 120, nullable: true}
+        city: {type: string, minLength: 1, maxLength: 60}
+        state: {type: string, minLength: 1, maxLength: 60}
+        postalCode: {type: string, pattern: '^[1-9][0-9]{5}$'}
+        country: {type: string, default: India}
+        isDefault: {type: boolean, default: false}
+    # ---- checkout
+    Bank:
+      type: object
+      properties:
+        code: {type: string}
+        name: {type: string}
+    ApplyPointsRequest:
+      type: object
+      required: [points]
+      properties:
+        points: {type: integer, minimum: 0}
+    ApplyPointsResult:
+      type: object
+      properties:
+        pointsApplied: {type: integer}
+        discountAmount: {type: number, format: double}
+        payableAmount: {type: number, format: double}
+        pointsToEarn: {type: integer}
+    CreateOrderRequest:
+      type: object
+      required: [paymentMethod]
+      properties:
+        addressId: {type: string, format: uuid, nullable: true, description: Required when the cart has a physical book}
+        paymentMethod: {$ref: '#/components/schemas/PaymentMethod'}
+        giftPointsToUse: {type: integer, minimum: 0, default: 0}
+    PaymentDetails:
+      type: object
+      description: |
+        Validated with the same rules as the client (FR-043) and then discarded; never stored or logged.
+        CREDIT_CARD and DEBIT_CARD: cardNumber (16 digits, spaces and dashes allowed), cardName (2-50 letters),
+        cvv (3 digits), expiry (MM/YYYY, this month or later). UPI: upiId (name@handle). NET_BANKING: bankCode
+        from /api/checkout/banks. WALLET and COD: no details.
+      properties:
+        cardNumber: {type: string, format: password}
+        cardName: {type: string}
+        cvv: {type: string, format: password}
+        expiry: {type: string, pattern: '^(0[1-9]|1[0-2])/[0-9]{4}$'}
+        upiId: {type: string}
+        bankCode: {type: string}
+    ConfirmPaymentRequest:
+      type: object
+      required: [orderId]
+      properties:
+        orderId: {type: string, format: uuid}
+        payment: {$ref: '#/components/schemas/PaymentDetails'}
+    FailPaymentRequest:
+      type: object
+      required: [orderId]
+      properties:
+        orderId: {type: string, format: uuid}
+    # ---- orders
+    OrderItem:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        bookId: {type: string, format: uuid}
+        title: {type: string}
+        author: {type: string}
+        format: {$ref: '#/components/schemas/BookFormat'}
+        coverImageUrl: {type: string}
+        quantity: {type: integer}
+        cancelledQuantity: {type: integer}
+        unitPrice: {type: number, format: double}
+        lineTotal: {type: number, format: double}
+        cancellable: {type: boolean}
+    Order:
+      type: object
+      required: [id, status, subtotal, shippingAmount, totalAmount, createdAt]
+      properties:
+        id: {type: string, format: uuid}
+        status: {$ref: '#/components/schemas/OrderStatus'}
+        items: {type: array, items: {$ref: '#/components/schemas/OrderItem'}}
+        subtotal: {type: number, format: double}
+        shippingAmount: {type: number, format: double}
+        giftPointsUsed: {type: integer}
+        discountAmount: {type: number, format: double}
+        totalAmount: {type: number, format: double, description: The payable amount}
+        pointsEarned: {type: integer, description: 'Server value; zero until the payment is confirmed'}
+        deliveryDate: {type: string, format: date, nullable: true}
+        address: {$ref: '#/components/schemas/Address'}
+        payment: {type: object, properties: {method: {$ref: '#/components/schemas/PaymentMethod'}, status: {type: string, enum: [PENDING, SUCCESS, FAILED, REFUNDED]}, reference: {type: string, nullable: true}}}
+        createdAt: {type: string, format: date-time}
+        confirmedAt: {type: string, format: date-time, nullable: true}
+        packedAt: {type: string, format: date-time, nullable: true}
+        shippedAt: {type: string, format: date-time, nullable: true}
+        deliveredAt: {type: string, format: date-time, nullable: true}
+        cancelledAt: {type: string, format: date-time, nullable: true}
+        expiresAt: {type: string, format: date-time, nullable: true, description: Only while PENDING}
+        cancellable: {type: boolean, description: Server decision (FR-059); true only while now < createdAt + 48h; false at exactly 48 hours and after}
+        cancelWindowEndsAt: {type: string, format: date-time}
+        cancelBlockedReason: {type: string, nullable: true}
+        cancellationFee: {type: number, format: double}
+        refundAmount: {type: number, format: double}
+        cancellations: {type: array, items: {$ref: '#/components/schemas/Cancellation'}}
+    Cancellation:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        reason: {type: string}
+        valueCancelled: {type: number, format: double}
+        feeRate: {type: number, format: double}
+        feeAmount: {type: number, format: double}
+        refundAmount: {type: number, format: double}
+        pointsRestored: {type: integer}
+        refundMethod: {type: string, enum: [WALLET, BANK]}
+        refundStatus: {type: string, enum: [PROCESSED, INITIATED]}
+        refundDestination: {type: string, description: 'Account number masked, for example XXXXXX1234'}
+        createdAt: {type: string, format: date-time}
+    CancelLine:
+      type: object
+      required: [orderItemId, quantity]
+      properties:
+        orderItemId: {type: string, format: uuid}
+        quantity: {type: integer, minimum: 1}
+    CancelPreview:
+      type: object
+      required: [cancellable]
+      properties:
+        cancellable: {type: boolean}
+        blockedReason: {type: string, nullable: true}
+        finalCancellation: {type: boolean}
+        lines: {type: array, items: {$ref: '#/components/schemas/CancelLine'}}
+        valueCancelled: {type: number, format: double}
+        discountShare: {type: number, format: double}
+        feeRate: {type: number, format: double, enum: [0, 0.1, 0.2]}
+        cancellationFee: {type: number, format: double}
+        refundAmount: {type: number, format: double}
+        pointsRestored: {type: integer}
+    BankDetails:
+      type: object
+      required: [accountHolder, accountNumber, ifsc]
+      properties:
+        accountHolder: {type: string, minLength: 2, maxLength: 100}
+        accountNumber: {type: string, pattern: '^[0-9]{9,18}$', format: password}
+        ifsc: {type: string, pattern: '^[A-Z]{4}0[A-Z0-9]{6}$'}
+    CancelRequest:
+      type: object
+      required: [reason, refundMethod]
+      properties:
+        reason: {type: string, minLength: 1, maxLength: 120}
+        note: {type: string, maxLength: 300, nullable: true}
+        items: {type: array, items: {$ref: '#/components/schemas/CancelLine'}, description: Omit to cancel everything cancellable}
+        refundMethod: {type: string, enum: [WALLET, BANK]}
+        bank: {allOf: [{$ref: '#/components/schemas/BankDetails'}], nullable: true, description: Required when refundMethod is BANK}
+        expectedRefund: {type: number, format: double, nullable: true, description: 'If the previewed refund changed, the call fails with REFUND_CHANGED'}
+    BuyAgainResult:
+      type: object
+      properties:
+        added: {type: array, items: {type: string}}
+        unavailable: {type: array, items: {type: string}, description: Titles that could not be added}
+    # ---- tier 2
+    TopUpRequest:
+      type: object
+      required: [amount, paymentMethod]
+      properties:
+        amount: {type: number, format: double, minimum: 1, maximum: 100000}
+        paymentMethod: {type: string, enum: [CREDIT_CARD, DEBIT_CARD, UPI, NET_BANKING]}
+        payment: {$ref: '#/components/schemas/PaymentDetails'}
+    Wallet:
+      type: object
+      properties:
+        balance: {type: number, format: double}
+        transactions: {type: array, items: {$ref: '#/components/schemas/WalletTransaction'}}
+    WalletTransaction:
+      type: object
+      properties:
+        id: {type: string, format: uuid}
+        type: {type: string, enum: [CREDIT, DEBIT]}
+        amount: {type: number, format: double}
+        source: {type: string, enum: [TOPUP, ORDER_PAYMENT, ORDER_REFUND]}
+        description: {type: string}
+        createdAt: {type: string, format: date-time}
+    WishlistRequest:
+      type: object
+      required: [bookId]
+      properties:
+        bookId: {type: string, format: uuid}
+    FollowRequest:
+      type: object
+      required: [authorSlug]
+      properties:
+        authorSlug: {type: string}
+    LibraryEntry:
+      type: object
+      properties:
+        book: {$ref: '#/components/schemas/BookSummary'}
+        orderId: {type: string, format: uuid}
+        purchasedAt: {type: string, format: date-time}
+    ReaderContent:
+      type: object
+      properties:
+        title: {type: string}
+        chapters: {type: array, items: {type: object, properties: {title: {type: string}, text: {type: string}}}}

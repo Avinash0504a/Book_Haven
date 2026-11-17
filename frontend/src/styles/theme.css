@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f7f8fa;
+  --color-text: #1f2328;
+  --color-muted: #57606a;
+  --color-border: #e5e7eb;
+  --color-primary: #0f62fe;
+  --color-primary-fg: #ffffff;
+  --color-success: #198038;
+  --color-danger: #da1e28;
+  --color-warning: #b28600;
+}
+
+.dark {
+  --color-bg: #121619;
+  --color-surface: #21272d;
+  --color-text: #f2f4f8;
+  --color-muted: #8d95a0;
+  --color-border: #343a40;
+  --color-primary: #4589ff;
+  --color-primary-fg: #ffffff;
+  --color-success: #24a148;
+  --color-danger: #fa4d56;
+  --color-warning: #f1c21b;
+}
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-primary: var(--color-primary);
+  --color-primary-fg: var(--color-primary-fg);
+  --color-success: var(--color-success);
+  --color-danger: var(--color-danger);
+  --color-warning: var(--color-warning);
+}
+
+/* Native dropdown popups ignore transparent backgrounds; give them theme colours. */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+select option {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+

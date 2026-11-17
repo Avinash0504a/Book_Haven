@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Portrait of Emily Parker">
+  <rect width="200" height="200" fill="#1f3a5f"/>
+  <circle cx="100" cy="76" r="34" fill="#2f5c94"/>
+  <path d="M30 200 C30 138 66 118 100 118 C134 118 170 138 170 200 Z" fill="#2f5c94"/>
+  <text x="100" y="168" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="bold" fill="#f4d35e">EP</text>
+</svg>

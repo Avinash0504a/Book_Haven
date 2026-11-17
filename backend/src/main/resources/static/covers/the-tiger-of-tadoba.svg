@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Tiger of Tadoba by Sanjay Kulkarni">
+  <rect width="300" height="450" fill="#1f3a5f"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f4d35e" stroke-width="2"/>
+  <text x="150" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#f4d35e">THE TIGER</text>
+  <text x="150" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#f4d35e">OF TADOBA</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#f4d35e" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f4d35e">SANJAY KULKARNI</text>
+</svg>

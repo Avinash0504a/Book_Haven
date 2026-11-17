@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Learn Telugu in 30 Days by Kavya Reddy">
+  <rect width="300" height="450" fill="#2a2a5f"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#ffb4a2" stroke-width="2"/>
+  <text x="150" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffb4a2">LEARN</text>
+  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffb4a2">TELUGU IN</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffb4a2">30 DAYS</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#ffb4a2" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#ffb4a2">KAVYA REDDY</text>
+</svg>

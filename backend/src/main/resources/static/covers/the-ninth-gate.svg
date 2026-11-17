@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Ninth Gate by Oliver Grant">
+  <rect width="300" height="450" fill="#0f4c3a"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#ffd166" stroke-width="2"/>
+  <text x="150" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffd166">THE NINTH</text>
+  <text x="150" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffd166">GATE</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#ffd166" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#ffd166">OLIVER GRANT</text>
+</svg>

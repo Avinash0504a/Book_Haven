@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Maa Ooru Katha by Kavya Reddy">
+  <rect width="300" height="450" fill="#0f4c5c"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#fb8b24" stroke-width="2"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#fb8b24">MAA OORU KATHA</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#fb8b24" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#fb8b24">KAVYA REDDY</text>
+</svg>

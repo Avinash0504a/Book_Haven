@@ -1,0 +1,13 @@
+# Secrets: never commit environment files
+.env
+.env.*
+
+# Build output and dependencies
+target/
+node_modules/
+dist/
+
+# Logs and temporary tool output
+*.log
+.bob/tmp/
+logs_mvn_install.txt

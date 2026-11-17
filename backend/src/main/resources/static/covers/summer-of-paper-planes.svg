@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Summer of Paper Planes by Daniel Brooks">
+  <rect width="300" height="450" fill="#4a1f3a"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#9be7c4" stroke-width="2"/>
+  <text x="150" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#9be7c4">SUMMER OF</text>
+  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#9be7c4">PAPER</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#9be7c4">PLANES</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#9be7c4" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#9be7c4">DANIEL BROOKS</text>
+</svg>

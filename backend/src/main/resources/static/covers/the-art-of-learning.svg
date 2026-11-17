@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Art of Learning by Raj Patel">
+  <rect width="300" height="450" fill="#7a1f2b"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f6e7cb" stroke-width="2"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f6e7cb">THE ART OF</text>
+  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f6e7cb">LEARNING</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#f6e7cb" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f6e7cb">RAJ PATEL</text>
+</svg>

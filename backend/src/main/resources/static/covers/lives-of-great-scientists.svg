@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Lives of Great Scientists by Rohan Mehta">
+  <rect width="300" height="450" fill="#3b1f5e"/>
+  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f9c5d1" stroke-width="2"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f9c5d1">LIVES OF GREAT</text>
+  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f9c5d1">SCIENTISTS</text>
+  <line x1="90" y1="330" x2="210" y2="330" stroke="#f9c5d1" stroke-width="2"/>
+  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f9c5d1">ROHAN MEHTA</text>
+</svg>
