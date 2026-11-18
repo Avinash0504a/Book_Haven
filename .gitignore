@@ -11,3 +11,6 @@ dist/
 *.log
 .bob/tmp/
 logs_mvn_install.txt
+
+# Local spec prompts (not for repo)
+book-haven-spec-prompts.md
