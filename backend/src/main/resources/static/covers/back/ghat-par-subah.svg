@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Ghat Par Subah">
+  <title>Back cover of Ghat Par Subah</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#364053"/><stop offset="1" stop-color="#111825"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#e0e1dd" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#e0e1dd" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e0e1dd">“Poems of dawn, rivers and</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e0e1dd">small city moments.”</text>
+  <path d="M82 118 H138 M162 118 H218" stroke="#e0e1dd" stroke-width="1.5"/>
+  <path d="M150 112 l6 6 l-6 6 l-6 -6z" fill="#e0e1dd"/>
+  <text x="150" y="146" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#e0e1dd">ABOUT THE AUTHOR</text>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">Neha Gupta is a Hindi poet and</text>
+  <text x="150" y="183" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">language teacher who writes for</text>
+  <text x="150" y="198" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">readers of every age. Her poems are</text>
+  <text x="150" y="213" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">short, musical and rooted in everyday</text>
+  <text x="150" y="228" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">life. She believes poetry belongs in</text>
+  <text x="150" y="243" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">classrooms, kitchens and bus stops</text>
+  <text x="150" y="258" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">alike.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#e0e1dd" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#e0e1dd"/>
+  <rect x="192" y="386" width="3" height="30" fill="#111825"/><rect x="197" y="386" width="3" height="30" fill="#111825"/><rect x="201" y="386" width="3" height="30" fill="#111825"/><rect x="205" y="386" width="2" height="30" fill="#111825"/><rect x="209" y="386" width="3" height="30" fill="#111825"/><rect x="213" y="386" width="3" height="30" fill="#111825"/><rect x="217" y="386" width="1" height="30" fill="#111825"/><rect x="219" y="386" width="3" height="30" fill="#111825"/><rect x="224" y="386" width="3" height="30" fill="#111825"/><rect x="228" y="386" width="2" height="30" fill="#111825"/><rect x="231" y="386" width="2" height="30" fill="#111825"/><rect x="235" y="386" width="2" height="30" fill="#111825"/><rect x="239" y="386" width="3" height="30" fill="#111825"/><rect x="244" y="386" width="1" height="30" fill="#111825"/><rect x="246" y="386" width="1" height="30" fill="#111825"/><rect x="248" y="386" width="3" height="30" fill="#111825"/><rect x="252" y="386" width="3" height="30" fill="#111825"/><rect x="256" y="386" width="1" height="30" fill="#111825"/><rect x="258" y="386" width="1" height="30" fill="#111825"/><rect x="260" y="386" width="1" height="30" fill="#111825"/>
+</svg>

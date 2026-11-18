@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Speak Hindi in 30 Days">
+  <title>Back cover of Speak Hindi in 30 Days</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5272"/><stop offset="1" stop-color="#13243b"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f4d35e" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f4d35e" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4d35e">“A thirty-day plan with</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4d35e">phrases, pronunciation and</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4d35e">practice.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#f4d35e" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#f4d35e"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#f4d35e">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">Neha Gupta is a Hindi poet and</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">language teacher who writes for</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">readers of every age. Her poems are</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">short, musical and rooted in everyday</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">life. She believes poetry belongs in</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">classrooms, kitchens and bus stops</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">alike.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#f4d35e" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#f4d35e"/>
+  <rect x="192" y="386" width="3" height="30" fill="#13243b"/><rect x="197" y="386" width="2" height="30" fill="#13243b"/><rect x="201" y="386" width="2" height="30" fill="#13243b"/><rect x="205" y="386" width="2" height="30" fill="#13243b"/><rect x="208" y="386" width="2" height="30" fill="#13243b"/><rect x="212" y="386" width="1" height="30" fill="#13243b"/><rect x="215" y="386" width="2" height="30" fill="#13243b"/><rect x="218" y="386" width="2" height="30" fill="#13243b"/><rect x="222" y="386" width="2" height="30" fill="#13243b"/><rect x="226" y="386" width="3" height="30" fill="#13243b"/><rect x="230" y="386" width="2" height="30" fill="#13243b"/><rect x="234" y="386" width="1" height="30" fill="#13243b"/><rect x="237" y="386" width="3" height="30" fill="#13243b"/><rect x="241" y="386" width="2" height="30" fill="#13243b"/><rect x="244" y="386" width="3" height="30" fill="#13243b"/><rect x="248" y="386" width="2" height="30" fill="#13243b"/><rect x="251" y="386" width="2" height="30" fill="#13243b"/><rect x="254" y="386" width="3" height="30" fill="#13243b"/><rect x="259" y="386" width="2" height="30" fill="#13243b"/><rect x="262" y="386" width="1" height="30" fill="#13243b"/>
+</svg>

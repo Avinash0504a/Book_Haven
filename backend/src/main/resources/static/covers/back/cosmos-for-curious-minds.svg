@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Cosmos for Curious Minds">
+  <title>Back cover of Cosmos for Curious Minds</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5272"/><stop offset="1" stop-color="#13243b"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f4d35e" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f4d35e" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4d35e">“Stars, planets and the</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4d35e">questions that keep</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4d35e">astronomers awake.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#f4d35e" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#f4d35e"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#f4d35e">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">Sarah Collins writes accessible</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">science and personal essays that begin</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">with a small observation and end</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">somewhere surprising. A trained</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">biologist, she brings field notes to</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">the page. Her readers praise her</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4d35e" fill-opacity=".85">patience and her sense of humour.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#f4d35e" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#f4d35e"/>
+  <rect x="192" y="386" width="3" height="30" fill="#13243b"/><rect x="197" y="386" width="2" height="30" fill="#13243b"/><rect x="200" y="386" width="2" height="30" fill="#13243b"/><rect x="203" y="386" width="1" height="30" fill="#13243b"/><rect x="206" y="386" width="1" height="30" fill="#13243b"/><rect x="208" y="386" width="1" height="30" fill="#13243b"/><rect x="210" y="386" width="2" height="30" fill="#13243b"/><rect x="214" y="386" width="3" height="30" fill="#13243b"/><rect x="218" y="386" width="3" height="30" fill="#13243b"/><rect x="223" y="386" width="3" height="30" fill="#13243b"/><rect x="227" y="386" width="2" height="30" fill="#13243b"/><rect x="230" y="386" width="1" height="30" fill="#13243b"/><rect x="232" y="386" width="3" height="30" fill="#13243b"/><rect x="237" y="386" width="3" height="30" fill="#13243b"/><rect x="241" y="386" width="1" height="30" fill="#13243b"/><rect x="243" y="386" width="3" height="30" fill="#13243b"/><rect x="247" y="386" width="2" height="30" fill="#13243b"/><rect x="250" y="386" width="2" height="30" fill="#13243b"/><rect x="254" y="386" width="3" height="30" fill="#13243b"/><rect x="259" y="386" width="3" height="30" fill="#13243b"/>
+</svg>

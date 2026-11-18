@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of The Final Frontier">
+  <title>Back cover of The Final Frontier</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#705447"/><stop offset="1" stop-color="#39261d"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#e8d5b7" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#e8d5b7" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e8d5b7">“A mission to space secrets</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e8d5b7">to change humanity forever.”</text>
+  <path d="M82 118 H138 M162 118 H218" stroke="#e8d5b7" stroke-width="1.5"/>
+  <path d="M150 112 l6 6 l-6 6 l-6 -6z" fill="#e8d5b7"/>
+  <text x="150" y="146" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#e8d5b7">ABOUT THE AUTHOR</text>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">Laura Mitchell writes science fiction</text>
+  <text x="150" y="183" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">inspired by space exploration and the</text>
+  <text x="150" y="198" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">people who make it happen. She grew up</text>
+  <text x="150" y="213" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">reading mission logs as bedtime</text>
+  <text x="150" y="228" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">stories and brings that wonder to her</text>
+  <text x="150" y="243" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">fiction. Her novels balance big ideas</text>
+  <text x="150" y="258" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">with very human crews.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#e8d5b7" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#e8d5b7"/>
+  <rect x="192" y="386" width="2" height="30" fill="#39261d"/><rect x="195" y="386" width="1" height="30" fill="#39261d"/><rect x="198" y="386" width="1" height="30" fill="#39261d"/><rect x="200" y="386" width="3" height="30" fill="#39261d"/><rect x="205" y="386" width="2" height="30" fill="#39261d"/><rect x="208" y="386" width="3" height="30" fill="#39261d"/><rect x="213" y="386" width="1" height="30" fill="#39261d"/><rect x="215" y="386" width="3" height="30" fill="#39261d"/><rect x="220" y="386" width="2" height="30" fill="#39261d"/><rect x="223" y="386" width="2" height="30" fill="#39261d"/><rect x="226" y="386" width="3" height="30" fill="#39261d"/><rect x="231" y="386" width="3" height="30" fill="#39261d"/><rect x="235" y="386" width="3" height="30" fill="#39261d"/><rect x="240" y="386" width="1" height="30" fill="#39261d"/><rect x="243" y="386" width="1" height="30" fill="#39261d"/><rect x="245" y="386" width="3" height="30" fill="#39261d"/><rect x="250" y="386" width="2" height="30" fill="#39261d"/><rect x="253" y="386" width="3" height="30" fill="#39261d"/><rect x="258" y="386" width="3" height="30" fill="#39261d"/><rect x="263" y="386" width="1" height="30" fill="#39261d"/>
+</svg>

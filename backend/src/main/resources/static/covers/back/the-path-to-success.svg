@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of The Path to Success">
+  <title>Back cover of The Path to Success</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#306846"/><stop offset="1" stop-color="#0c331c"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#fde68a" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#fde68a" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#fde68a">“A practical guide to</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#fde68a">achieving goals with clarity</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#fde68a">and confidence.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#fde68a" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#fde68a"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#fde68a">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">James Wright writes about goals,</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">habits and quiet confidence. He draws</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">on years of coaching professionals</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">through career changes and turns those</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">conversations into clear, encouraging</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">advice. Readers return to his books</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">for their steady tone and practical</text>
+  <text x="150" y="295" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fde68a" fill-opacity=".85">exercises.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#fde68a" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#fde68a"/>
+  <rect x="192" y="386" width="3" height="30" fill="#0c331c"/><rect x="196" y="386" width="1" height="30" fill="#0c331c"/><rect x="198" y="386" width="1" height="30" fill="#0c331c"/><rect x="200" y="386" width="3" height="30" fill="#0c331c"/><rect x="204" y="386" width="1" height="30" fill="#0c331c"/><rect x="207" y="386" width="3" height="30" fill="#0c331c"/><rect x="212" y="386" width="1" height="30" fill="#0c331c"/><rect x="214" y="386" width="1" height="30" fill="#0c331c"/><rect x="216" y="386" width="3" height="30" fill="#0c331c"/><rect x="221" y="386" width="2" height="30" fill="#0c331c"/><rect x="224" y="386" width="2" height="30" fill="#0c331c"/><rect x="228" y="386" width="1" height="30" fill="#0c331c"/><rect x="230" y="386" width="1" height="30" fill="#0c331c"/><rect x="232" y="386" width="3" height="30" fill="#0c331c"/><rect x="237" y="386" width="1" height="30" fill="#0c331c"/><rect x="239" y="386" width="3" height="30" fill="#0c331c"/><rect x="244" y="386" width="3" height="30" fill="#0c331c"/><rect x="248" y="386" width="1" height="30" fill="#0c331c"/><rect x="250" y="386" width="3" height="30" fill="#0c331c"/><rect x="255" y="386" width="1" height="30" fill="#0c331c"/><rect x="257" y="386" width="1" height="30" fill="#0c331c"/><rect x="259" y="386" width="3" height="30" fill="#0c331c"/>
+</svg>

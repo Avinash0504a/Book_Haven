@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Beneath the Stars">
+  <title>Back cover of Beneath the Stars</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c6170"/><stop offset="1" stop-color="#092f39"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#fb8b24" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#fb8b24" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#fb8b24">“A heartwarming tale, where</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#fb8b24">two souls discover who you</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#fb8b24">need.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#fb8b24" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#fb8b24"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#fb8b24">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">Jessica Martin is a romance novelist</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">with a taste for sweeping settings,</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">from hill stations to harbour towns.</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">Her stories pair patient slow-burn</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">love with vivid local detail. She</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">writes each book first as a letter to</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#fb8b24" fill-opacity=".85">someone she has never met.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#fb8b24" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#fb8b24"/>
+  <rect x="192" y="386" width="1" height="30" fill="#092f39"/><rect x="194" y="386" width="1" height="30" fill="#092f39"/><rect x="196" y="386" width="1" height="30" fill="#092f39"/><rect x="199" y="386" width="1" height="30" fill="#092f39"/><rect x="202" y="386" width="2" height="30" fill="#092f39"/><rect x="206" y="386" width="1" height="30" fill="#092f39"/><rect x="208" y="386" width="3" height="30" fill="#092f39"/><rect x="212" y="386" width="1" height="30" fill="#092f39"/><rect x="214" y="386" width="2" height="30" fill="#092f39"/><rect x="218" y="386" width="3" height="30" fill="#092f39"/><rect x="223" y="386" width="3" height="30" fill="#092f39"/><rect x="228" y="386" width="2" height="30" fill="#092f39"/><rect x="231" y="386" width="1" height="30" fill="#092f39"/><rect x="234" y="386" width="3" height="30" fill="#092f39"/><rect x="238" y="386" width="1" height="30" fill="#092f39"/><rect x="240" y="386" width="3" height="30" fill="#092f39"/><rect x="244" y="386" width="1" height="30" fill="#092f39"/><rect x="247" y="386" width="1" height="30" fill="#092f39"/><rect x="249" y="386" width="3" height="30" fill="#092f39"/><rect x="253" y="386" width="2" height="30" fill="#092f39"/><rect x="256" y="386" width="2" height="30" fill="#092f39"/><rect x="259" y="386" width="3" height="30" fill="#092f39"/>
+</svg>

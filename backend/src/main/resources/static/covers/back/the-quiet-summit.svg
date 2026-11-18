@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of The Quiet Summit">
+  <title>Back cover of The Quiet Summit</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#705447"/><stop offset="1" stop-color="#39261d"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#e8d5b7" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#e8d5b7" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e8d5b7">“A slow walk through the</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e8d5b7">Himalayas and what the</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e8d5b7">silence teaches.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#e8d5b7" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#e8d5b7"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#e8d5b7">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">Rohan Mehta is a travel writer and</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">biographer who follows his subjects</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">across borders and decades. He is</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">known for patient research and for</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">finding the small, human detail in a</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">grand story. He writes between</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e8d5b7" fill-opacity=".85">journeys, usually on trains.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#e8d5b7" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#e8d5b7"/>
+  <rect x="192" y="386" width="2" height="30" fill="#39261d"/><rect x="196" y="386" width="3" height="30" fill="#39261d"/><rect x="200" y="386" width="1" height="30" fill="#39261d"/><rect x="203" y="386" width="1" height="30" fill="#39261d"/><rect x="206" y="386" width="2" height="30" fill="#39261d"/><rect x="209" y="386" width="2" height="30" fill="#39261d"/><rect x="213" y="386" width="2" height="30" fill="#39261d"/><rect x="217" y="386" width="3" height="30" fill="#39261d"/><rect x="221" y="386" width="1" height="30" fill="#39261d"/><rect x="224" y="386" width="3" height="30" fill="#39261d"/><rect x="228" y="386" width="3" height="30" fill="#39261d"/><rect x="232" y="386" width="1" height="30" fill="#39261d"/><rect x="235" y="386" width="2" height="30" fill="#39261d"/><rect x="239" y="386" width="3" height="30" fill="#39261d"/><rect x="244" y="386" width="1" height="30" fill="#39261d"/><rect x="247" y="386" width="1" height="30" fill="#39261d"/><rect x="249" y="386" width="3" height="30" fill="#39261d"/><rect x="254" y="386" width="1" height="30" fill="#39261d"/><rect x="256" y="386" width="3" height="30" fill="#39261d"/><rect x="261" y="386" width="2" height="30" fill="#39261d"/>
+</svg>

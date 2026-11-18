@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Male Haadu">
+  <title>Back cover of Male Haadu</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#533a72"/><stop offset="1" stop-color="#25133b"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f5b7d4" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f5b7d4" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f5b7d4">“Kannada verses on monsoon</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f5b7d4">clouds, markets and midnight</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f5b7d4">trains.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#f5b7d4" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#f5b7d4"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#f5b7d4">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">Arvind Swamy is a Kannada writer of</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">memoir and mystery. He mixes</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">recollection with suspense, so that</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">even a family story keeps its secrets</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">until the last chapter. He writes in</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">the evenings after a full day as a</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f5b7d4" fill-opacity=".85">schoolteacher.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#f5b7d4" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#f5b7d4"/>
+  <rect x="192" y="386" width="3" height="30" fill="#25133b"/><rect x="197" y="386" width="3" height="30" fill="#25133b"/><rect x="201" y="386" width="3" height="30" fill="#25133b"/><rect x="206" y="386" width="1" height="30" fill="#25133b"/><rect x="209" y="386" width="1" height="30" fill="#25133b"/><rect x="211" y="386" width="1" height="30" fill="#25133b"/><rect x="214" y="386" width="1" height="30" fill="#25133b"/><rect x="216" y="386" width="3" height="30" fill="#25133b"/><rect x="221" y="386" width="3" height="30" fill="#25133b"/><rect x="226" y="386" width="3" height="30" fill="#25133b"/><rect x="230" y="386" width="1" height="30" fill="#25133b"/><rect x="232" y="386" width="2" height="30" fill="#25133b"/><rect x="236" y="386" width="1" height="30" fill="#25133b"/><rect x="238" y="386" width="1" height="30" fill="#25133b"/><rect x="241" y="386" width="1" height="30" fill="#25133b"/><rect x="243" y="386" width="1" height="30" fill="#25133b"/><rect x="245" y="386" width="1" height="30" fill="#25133b"/><rect x="247" y="386" width="3" height="30" fill="#25133b"/><rect x="251" y="386" width="3" height="30" fill="#25133b"/><rect x="256" y="386" width="3" height="30" fill="#25133b"/><rect x="260" y="386" width="2" height="30" fill="#25133b"/>
+</svg>

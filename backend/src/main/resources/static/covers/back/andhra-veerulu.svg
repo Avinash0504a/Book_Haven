@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Andhra Veerulu">
+  <title>Back cover of Andhra Veerulu</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#305964"/><stop offset="1" stop-color="#0c2931"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#ff9f43" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#ff9f43" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ff9f43">“Tales of the warriors and</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ff9f43">poets who shaped the Telugu</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ff9f43">country.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#ff9f43" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#ff9f43"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#ff9f43">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">Kavya Reddy is a Telugu novelist and</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">playwright whose work moves between</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">village life and the city stage. Her</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">dialogue is sharp and her characters</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">stubbornly alive. She has seen several</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">of her plays performed in regional</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">theatres.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#ff9f43" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#ff9f43"/>
+  <rect x="192" y="386" width="1" height="30" fill="#0c2931"/><rect x="194" y="386" width="1" height="30" fill="#0c2931"/><rect x="196" y="386" width="3" height="30" fill="#0c2931"/><rect x="201" y="386" width="1" height="30" fill="#0c2931"/><rect x="203" y="386" width="2" height="30" fill="#0c2931"/><rect x="206" y="386" width="3" height="30" fill="#0c2931"/><rect x="211" y="386" width="2" height="30" fill="#0c2931"/><rect x="215" y="386" width="3" height="30" fill="#0c2931"/><rect x="219" y="386" width="2" height="30" fill="#0c2931"/><rect x="222" y="386" width="1" height="30" fill="#0c2931"/><rect x="225" y="386" width="2" height="30" fill="#0c2931"/><rect x="228" y="386" width="1" height="30" fill="#0c2931"/><rect x="231" y="386" width="1" height="30" fill="#0c2931"/><rect x="234" y="386" width="1" height="30" fill="#0c2931"/><rect x="237" y="386" width="1" height="30" fill="#0c2931"/><rect x="240" y="386" width="1" height="30" fill="#0c2931"/><rect x="242" y="386" width="2" height="30" fill="#0c2931"/><rect x="245" y="386" width="3" height="30" fill="#0c2931"/><rect x="250" y="386" width="2" height="30" fill="#0c2931"/><rect x="254" y="386" width="1" height="30" fill="#0c2931"/><rect x="256" y="386" width="2" height="30" fill="#0c2931"/><rect x="260" y="386" width="1" height="30" fill="#0c2931"/>
+</svg>

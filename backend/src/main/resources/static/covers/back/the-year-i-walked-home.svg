@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of The Year I Walked Home">
+  <title>Back cover of The Year I Walked Home</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#444472"/><stop offset="1" stop-color="#1a1a3b"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#ffb4a2" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#ffb4a2" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ffb4a2">“A year of long walks, short</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ffb4a2">rests and the people met</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ffb4a2">along the road.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#ffb4a2" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#ffb4a2"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#ffb4a2">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">Priya Nair writes warm stories of</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">love, family and the kitchens where</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">both are made. Her novels follow</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">ordinary households through festivals,</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">quarrels and quiet reconciliations.</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">She lives on the Kerala coast and</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">writes in the early morning before the</text>
+  <text x="150" y="295" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ffb4a2" fill-opacity=".85">house wakes.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#ffb4a2" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#ffb4a2"/>
+  <rect x="192" y="386" width="3" height="30" fill="#1a1a3b"/><rect x="196" y="386" width="2" height="30" fill="#1a1a3b"/><rect x="200" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="203" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="206" y="386" width="2" height="30" fill="#1a1a3b"/><rect x="210" y="386" width="2" height="30" fill="#1a1a3b"/><rect x="214" y="386" width="2" height="30" fill="#1a1a3b"/><rect x="217" y="386" width="3" height="30" fill="#1a1a3b"/><rect x="222" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="225" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="227" y="386" width="3" height="30" fill="#1a1a3b"/><rect x="231" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="234" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="237" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="239" y="386" width="3" height="30" fill="#1a1a3b"/><rect x="244" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="247" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="249" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="252" y="386" width="3" height="30" fill="#1a1a3b"/><rect x="256" y="386" width="3" height="30" fill="#1a1a3b"/><rect x="261" y="386" width="1" height="30" fill="#1a1a3b"/><rect x="263" y="386" width="1" height="30" fill="#1a1a3b"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of The Hostel Club">
+  <title>Back cover of The Hostel Club</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d523a"/><stop offset="1" stop-color="#162413"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f4e285" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f4e285" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4e285">“Five first-years, one leaky</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4e285">hostel and the club that</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#f4e285">holds them together.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#f4e285" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#f4e285"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#f4e285">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">Isha Verma is a Hindi romance novelist</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">with a gift for tender, everyday love</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">stories. Her characters are</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">neighbours, colleagues and old friends</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">who find each other in small ways.</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">Readers describe her books as a warm</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#f4e285" fill-opacity=".85">shawl on a cool evening.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#f4e285" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#f4e285"/>
+  <rect x="192" y="386" width="3" height="30" fill="#162413"/><rect x="197" y="386" width="2" height="30" fill="#162413"/><rect x="201" y="386" width="2" height="30" fill="#162413"/><rect x="204" y="386" width="2" height="30" fill="#162413"/><rect x="208" y="386" width="1" height="30" fill="#162413"/><rect x="211" y="386" width="3" height="30" fill="#162413"/><rect x="215" y="386" width="1" height="30" fill="#162413"/><rect x="217" y="386" width="1" height="30" fill="#162413"/><rect x="219" y="386" width="1" height="30" fill="#162413"/><rect x="222" y="386" width="2" height="30" fill="#162413"/><rect x="225" y="386" width="2" height="30" fill="#162413"/><rect x="229" y="386" width="3" height="30" fill="#162413"/><rect x="234" y="386" width="3" height="30" fill="#162413"/><rect x="239" y="386" width="1" height="30" fill="#162413"/><rect x="241" y="386" width="3" height="30" fill="#162413"/><rect x="245" y="386" width="3" height="30" fill="#162413"/><rect x="250" y="386" width="2" height="30" fill="#162413"/><rect x="253" y="386" width="1" height="30" fill="#162413"/><rect x="256" y="386" width="2" height="30" fill="#162413"/><rect x="259" y="386" width="1" height="30" fill="#162413"/><rect x="262" y="386" width="2" height="30" fill="#162413"/>
+</svg>

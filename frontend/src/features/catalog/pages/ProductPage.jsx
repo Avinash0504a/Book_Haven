@@ -35,48 +35,6 @@ function firstSentence(text) {
   return (match ? match[0] : text).trim();
 }
 
-// A simple barcode drawn from the ISBN digits (decorative; not a scannable EAN-13).
-function IsbnBarcode({ isbn }) {
-  const digits = String(isbn || '').replace(/\D/g, '');
-  if (!digits) return null;
-  const bars = [];
-  let x = 0;
-  for (const d of digits) {
-    const n = Number(d);
-    bars.push({ x, w: (n % 3) + 1 });
-    x += (n % 3) + 1 + ((n % 2) + 1);
-  }
-  return (
-    <div className="bg-bg border border-border rounded-sm p-2 inline-block" aria-label={`ISBN ${isbn}`}>
-      <svg viewBox={`0 0 ${x} 24`} className="h-8 w-28 text-text" aria-hidden="true" preserveAspectRatio="none">
-        {bars.map((bar) => (
-          <rect key={bar.x} x={bar.x} y="0" width={bar.w} height="24" fill="currentColor" />
-        ))}
-      </svg>
-      <p className="text-[10px] text-muted text-center mt-1 tracking-wider">{isbn}</p>
-    </div>
-  );
-}
-
-function BackCover({ book, authorName, authorBio }) {
-  const quote = firstSentence(book.description);
-  return (
-    <div className="aspect-[2/3] w-full rounded-md overflow-hidden bg-surface border border-border shadow-md p-3 sm:p-4 flex flex-col text-[11px] leading-snug">
-      {quote && <p className="font-semibold text-text italic line-clamp-3">&ldquo;{quote}&rdquo;</p>}
-      {book.description && <p className="text-muted mt-2 line-clamp-5">{book.description}</p>}
-      {authorName && (
-        <div className="mt-3">
-          <p className="font-bold text-text">About the Author</p>
-          <p className="text-muted mt-1 line-clamp-4">{authorBio || authorName}</p>
-        </div>
-      )}
-      <div className="mt-auto pt-2 flex justify-end">
-        <IsbnBarcode isbn={book.isbn} />
-      </div>
-    </div>
-  );
-}
-
 function Stars({ value }) {
   const filled = Math.round(Number(value) || 0);
   return (
@@ -155,6 +113,7 @@ export function ProductPage() {
   const publisherName = book.brand?.name || book.publisher || '';
   const publisherLink = book.brand?.id ? `/?brandId=${encodeURIComponent(book.brand.id)}` : null;
   const coverSrc = book.coverImageUrl || `/covers/${book.slug}.svg`;
+  const backCoverSrc = `/covers/back/${book.slug}.svg`;
 
   return (
     <div className="space-y-10">
@@ -195,7 +154,9 @@ export function ProductPage() {
                 )}
               </div>
               <div className="w-40 sm:w-48 shrink-0">
-                <BackCover book={book} authorName={authorName} authorBio={authorBio} />
+                <div className="aspect-[2/3] w-full rounded-md overflow-hidden bg-surface border border-border shadow-md">
+                  <img src={backCoverSrc} alt={`Back cover of ${book.title}`} className="w-full h-full object-cover" />
+                </div>
               </div>
             </div>
 

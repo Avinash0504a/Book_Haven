@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of The Moon and the Mango Tree">
+  <title>Back cover of The Moon and the Mango Tree</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#305964"/><stop offset="1" stop-color="#0c2931"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#ff9f43" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#ff9f43" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ff9f43">“A curious squirrel climbs</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ff9f43">to ask the moon one big</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#ff9f43">question.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#ff9f43" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#ff9f43"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#ff9f43">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">Emily Parker is a children's author of</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">animal adventures full of friendship</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">and mischief. A former primary school</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">librarian, she tests every story out</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">loud on a live audience of</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">seven-year-olds. Her books are made</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#ff9f43" fill-opacity=".85">for bedtime and for reading twice.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#ff9f43" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#ff9f43"/>
+  <rect x="192" y="386" width="1" height="30" fill="#0c2931"/><rect x="194" y="386" width="3" height="30" fill="#0c2931"/><rect x="199" y="386" width="3" height="30" fill="#0c2931"/><rect x="203" y="386" width="2" height="30" fill="#0c2931"/><rect x="206" y="386" width="1" height="30" fill="#0c2931"/><rect x="209" y="386" width="3" height="30" fill="#0c2931"/><rect x="214" y="386" width="3" height="30" fill="#0c2931"/><rect x="219" y="386" width="3" height="30" fill="#0c2931"/><rect x="224" y="386" width="3" height="30" fill="#0c2931"/><rect x="228" y="386" width="2" height="30" fill="#0c2931"/><rect x="232" y="386" width="2" height="30" fill="#0c2931"/><rect x="235" y="386" width="1" height="30" fill="#0c2931"/><rect x="238" y="386" width="3" height="30" fill="#0c2931"/><rect x="242" y="386" width="3" height="30" fill="#0c2931"/><rect x="246" y="386" width="1" height="30" fill="#0c2931"/><rect x="248" y="386" width="1" height="30" fill="#0c2931"/><rect x="251" y="386" width="2" height="30" fill="#0c2931"/><rect x="255" y="386" width="3" height="30" fill="#0c2931"/><rect x="259" y="386" width="2" height="30" fill="#0c2931"/><rect x="262" y="386" width="2" height="30" fill="#0c2931"/>
+</svg>

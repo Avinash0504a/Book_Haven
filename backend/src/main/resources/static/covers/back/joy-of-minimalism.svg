@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Back cover of Joy of Minimalism">
+  <title>Back cover of Joy of Minimalism</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#364053"/><stop offset="1" stop-color="#111825"/></linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#e0e1dd" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#e0e1dd" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e0e1dd">“Declutter your life to</text>
+  <text x="150" y="96" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e0e1dd">uncover peace, clarity and</text>
+  <text x="150" y="118" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-style="italic" font-weight="bold" fill="#e0e1dd">joy.”</text>
+  <path d="M82 140 H138 M162 140 H218" stroke="#e0e1dd" stroke-width="1.5"/>
+  <path d="M150 134 l6 6 l-6 6 l-6 -6z" fill="#e0e1dd"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="bold" letter-spacing="2" fill="#e0e1dd">ABOUT THE AUTHOR</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">Daniel Reed is a champion of simple</text>
+  <text x="150" y="205" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">living and clear thinking. His essays</text>
+  <text x="150" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">and guides ask readers to own less,</text>
+  <text x="150" y="235" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">decide faster and spend time on what</text>
+  <text x="150" y="250" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">matters. He writes from a small flat</text>
+  <text x="150" y="265" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">with a large bookshelf and one very</text>
+  <text x="150" y="280" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#e0e1dd" fill-opacity=".85">old desk.</text>
+  <text x="34" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1.5" fill="#e0e1dd" fill-opacity=".8">BOOK HAVEN</text>
+  <rect x="186" y="380" width="84" height="42" fill="#e0e1dd"/>
+  <rect x="192" y="386" width="3" height="30" fill="#111825"/><rect x="196" y="386" width="1" height="30" fill="#111825"/><rect x="198" y="386" width="3" height="30" fill="#111825"/><rect x="202" y="386" width="1" height="30" fill="#111825"/><rect x="204" y="386" width="1" height="30" fill="#111825"/><rect x="206" y="386" width="3" height="30" fill="#111825"/><rect x="211" y="386" width="2" height="30" fill="#111825"/><rect x="215" y="386" width="2" height="30" fill="#111825"/><rect x="218" y="386" width="3" height="30" fill="#111825"/><rect x="222" y="386" width="3" height="30" fill="#111825"/><rect x="226" y="386" width="3" height="30" fill="#111825"/><rect x="231" y="386" width="3" height="30" fill="#111825"/><rect x="235" y="386" width="2" height="30" fill="#111825"/><rect x="239" y="386" width="2" height="30" fill="#111825"/><rect x="243" y="386" width="2" height="30" fill="#111825"/><rect x="247" y="386" width="1" height="30" fill="#111825"/><rect x="250" y="386" width="2" height="30" fill="#111825"/><rect x="254" y="386" width="3" height="30" fill="#111825"/><rect x="258" y="386" width="1" height="30" fill="#111825"/><rect x="261" y="386" width="3" height="30" fill="#111825"/>
+</svg>
