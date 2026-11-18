@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Beneath the Stars by Jessica Martin">
-  <rect width="300" height="450" fill="#0f4c5c"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#fb8b24" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#fb8b24">BENEATH THE</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#fb8b24">STARS</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#fb8b24" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#fb8b24">JESSICA MARTIN</text>
+  <title>Beneath the Stars by Jessica Martin</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c6170"/><stop offset="1" stop-color="#092f39"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fb8b24" stop-opacity=".32"/><stop offset=".6" stop-color="#fb8b24" stop-opacity=".08"/><stop offset="1" stop-color="#fb8b24" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#fb8b24" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#fb8b24" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="77.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="35" font-weight="bold" fill="#fb8b24">BENEATH</text>
+  <text x="150" y="117.0" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="35" font-weight="bold" fill="#fb8b24">THE STARS</text>
+  <text x="150" y="145.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#fb8b24" fill-opacity=".8">A ROMANCE</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.411) translate(0 5.2)" color="#fb8b24" stroke="currentColor" fill="none" stroke-width="1.98" stroke-linecap="round" stroke-linejoin="round"><path d="M-70 44 Q-20 8 70 44"/><circle cx="-12" cy="14" r="5" fill="currentColor" stroke="none"/><path d="M-20 34 Q-12 20 -4 34"/><circle cx="8" cy="16" r="5" fill="currentColor" stroke="none"/><path d="M0 36 Q8 22 16 36"/><path transform="translate(-40 -34) scale(1)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(10 -44) scale(1.3)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(48 -26) scale(1)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(-8 -14) scale(0.7)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(60 0) scale(0.6)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#fb8b24" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#fb8b24"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#fb8b24">JESSICA MARTIN</text>
 </svg>

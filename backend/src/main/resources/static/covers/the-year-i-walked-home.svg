@@ -1,8 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Year I Walked Home by Priya Nair">
-  <rect width="300" height="450" fill="#2a2a5f"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#ffb4a2" stroke-width="2"/>
-  <text x="150" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffb4a2">THE YEAR I</text>
-  <text x="150" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ffb4a2">WALKED HOME</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#ffb4a2" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#ffb4a2">PRIYA NAIR</text>
+  <title>The Year I Walked Home by Priya Nair</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#444472"/><stop offset="1" stop-color="#1a1a3b"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb4a2" stop-opacity=".32"/><stop offset=".6" stop-color="#ffb4a2" stop-opacity=".08"/><stop offset="1" stop-color="#ffb4a2" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#ffb4a2" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#ffb4a2" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="61.7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#ffb4a2">THE YEAR</text>
+  <text x="150" y="95.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#ffb4a2">I WALKED</text>
+  <text x="150" y="130.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#ffb4a2">HOME</text>
+  <text x="150" y="157.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#ffb4a2" fill-opacity=".8">A MEMOIR</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.659) translate(0.2 -1.8)" color="#ffb4a2" stroke="currentColor" fill="none" stroke-width="1.69" stroke-linecap="round" stroke-linejoin="round"><path d="M-50 44 L-8 -6 H8 L50 44Z" fill="currentColor" fill-opacity=".25"/><path d="M0 44 V34 M0 24 V16 M0 10 V6" stroke-dasharray="1 1"/><path d="M-12 -6 V-20 L0 -32 L12 -20 V-6Z" fill="currentColor" fill-opacity=".25"/><path transform="translate(48 -34) scale(0.8)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(-50 -34) scale(0.6)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#ffb4a2" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#ffb4a2"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#ffb4a2">PRIYA NAIR</text>
 </svg>

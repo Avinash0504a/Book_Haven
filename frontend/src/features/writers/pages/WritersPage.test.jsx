@@ -26,6 +26,13 @@ describe('WritersPageTest', () => {
     expect(screen.getAllByText('R. K. Narayan').length).toBeGreaterThan(0);
   });
 
+  it('shows the About the writer bio on each writer card', async () => {
+    renderWithProviders(<WritersPage />);
+
+    expect(await screen.findByText('About the writer')).toBeInTheDocument();
+    expect(screen.getByText('Celebrated Indian novelist known for Malgudi stories.')).toBeInTheDocument();
+  });
+
   it('emptyFollowedState: shows a hint when no writer is followed', async () => {
     server.use(
       http.get('/api/following', () =>

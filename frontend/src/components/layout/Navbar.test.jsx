@@ -45,6 +45,35 @@ describe('Navbar', () => {
     }
   });
 
+  it('closes the account menu on an outside click or Escape, but not on a click inside it', () => {
+    renderWithProviders(<Navbar />, { auth: mockAuth });
+    const trigger = screen.getByLabelText('User account menu');
+
+    fireEvent.click(trigger);
+    expect(screen.getByText('Gift Points')).toBeInTheDocument();
+
+    // Clicking inside the menu keeps it open.
+    fireEvent.mouseDown(screen.getByText('reader@bookhaven.local'));
+    expect(screen.getByText('Gift Points')).toBeInTheDocument();
+
+    // Clicking anywhere else closes it.
+    fireEvent.mouseDown(document.body);
+    expect(screen.queryByText('Gift Points')).not.toBeInTheDocument();
+
+    // Escape closes it too.
+    fireEvent.click(trigger);
+    expect(screen.getByText('Gift Points')).toBeInTheDocument();
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(screen.queryByText('Gift Points')).not.toBeInTheDocument();
+
+    // The trigger still toggles it.
+    fireEvent.click(trigger);
+    expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    fireEvent.mouseDown(trigger);
+    fireEvent.click(trigger);
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+  });
+
   it('renders logo, search bar, and guest auth buttons', () => {
     renderWithProviders(<Navbar />);
     expect(screen.getByText('Book Haven')).toBeInTheDocument();

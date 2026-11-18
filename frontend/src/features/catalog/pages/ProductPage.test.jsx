@@ -18,8 +18,11 @@ describe('ProductPage', () => {
       expect(screen.getByRole('heading', { name: 'The Guide' })).toBeInTheDocument();
       expect(screen.getByRole('navigation', { name: 'Breadcrumb' })).toBeInTheDocument();
       expect(screen.getAllByText(/R. K. Narayan/)[0]).toBeInTheDocument();
-      expect(screen.getByText(/Estimated Delivery:/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/Delivery by/i)[0]).toBeInTheDocument();
       expect(screen.getByText('Overview & Description')).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: 'About the writer' })).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: 'Related Reads' })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'Add to wishlist' })).toHaveTextContent('Add to Wishlist');
     });
   });
 });

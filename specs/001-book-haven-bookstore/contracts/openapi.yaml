@@ -903,6 +903,7 @@ components:
         name: {type: string}
         slug: {type: string}
         imageUrl: {type: string, nullable: true}
+        bio: {type: string, nullable: true, description: 'Short biography shown in About the writer'}
         following: {type: boolean, description: 'True only when the caller is logged in and follows the writer'}
     AuthorProfile:
       allOf:

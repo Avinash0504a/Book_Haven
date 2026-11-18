@@ -44,8 +44,8 @@ export function BookTile({ book, showCartControl = true, variant = 'card' }) {
             loading="lazy"
           />
           {!book.inStock && (
-            <div className="absolute top-1.5 left-1.5">
-              <Badge variant="danger" size="sm">
+            <div className="absolute bottom-1.5 right-1.5">
+              <Badge variant="dangerSolid" size="sm">
                 Out of Stock
               </Badge>
             </div>
@@ -120,8 +120,8 @@ export function BookTile({ book, showCartControl = true, variant = 'card' }) {
           loading="lazy"
         />
         {!book.inStock && (
-          <div className="absolute top-2 left-2">
-            <Badge variant="danger" size="sm">
+          <div className="absolute bottom-2 right-2">
+            <Badge variant="dangerSolid" size="sm">
               Out of Stock
             </Badge>
           </div>

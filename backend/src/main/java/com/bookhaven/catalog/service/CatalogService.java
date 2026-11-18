@@ -1,6 +1,19 @@
 package com.bookhaven.catalog.service;
 
-import com.bookhaven.catalog.dto.AuthorDto;
+import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.bookhaven.catalog.dto.AuthorProfileDto;
 import com.bookhaven.catalog.dto.AuthorSummaryDto;
 import com.bookhaven.catalog.dto.BookDetail;
@@ -24,19 +37,6 @@ import com.bookhaven.common.MoneyUtil;
 import com.bookhaven.member.repository.WishlistItemRepository;
 import com.bookhaven.security.CurrentMember;
 import com.bookhaven.shipping.service.DeliveryEstimator;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.UUID;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional(readOnly = true)
@@ -48,6 +48,7 @@ public class CatalogService {
   private final BookRepository bookRepository;
   private final CategoryRepository categoryRepository;
   private final BrandRepository brandRepository;
+  @SuppressWarnings("unused")
   private final AuthorRepository authorRepository;
   private final StockNotificationRepository stockNotificationRepository;
   private final DeliveryEstimator deliveryEstimator;

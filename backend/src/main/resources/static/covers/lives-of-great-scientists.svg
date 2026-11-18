@@ -1,8 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Lives of Great Scientists by Rohan Mehta">
-  <rect width="300" height="450" fill="#3b1f5e"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f9c5d1" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f9c5d1">LIVES OF GREAT</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f9c5d1">SCIENTISTS</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#f9c5d1" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f9c5d1">ROHAN MEHTA</text>
+  <title>Lives of Great Scientists by Rohan Mehta</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#533a71"/><stop offset="1" stop-color="#25133a"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9c5d1" stop-opacity=".32"/><stop offset=".6" stop-color="#f9c5d1" stop-opacity=".08"/><stop offset="1" stop-color="#f9c5d1" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f9c5d1" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f9c5d1" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="61.7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#f9c5d1">LIVES</text>
+  <text x="150" y="95.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#f9c5d1">OF GREAT</text>
+  <text x="150" y="130.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#f9c5d1">SCIENTISTS</text>
+  <text x="150" y="157.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#f9c5d1" fill-opacity=".8">A BIOGRAPHY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.705) translate(0 19)" color="#f9c5d1" stroke="currentColor" fill="none" stroke-width="1.64" stroke-linecap="round" stroke-linejoin="round"><circle cy="-16" r="26" fill="currentColor" fill-opacity=".25"/><path d="M-12 8 H12 M-10 15 H10 M-6 22 H6 M-6 -2 q6 8 12 0 M0 -2 V8"/><path d="M0 -52 V-60 M-34 -36 l-6 -4 M34 -36 l6 -4 M-42 -16 H-50 M42 -16 H50"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#f9c5d1" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#f9c5d1"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#f9c5d1">ROHAN MEHTA</text>
 </svg>

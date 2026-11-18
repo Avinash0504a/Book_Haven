@@ -1,7 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Stoic Mornings by Thomas Bennett">
-  <rect width="300" height="450" fill="#1b263b"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#e0e1dd" stroke-width="2"/>
-  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#e0e1dd">STOIC MORNINGS</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#e0e1dd" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#e0e1dd">THOMAS BENNETT</text>
+  <title>Stoic Mornings by Thomas Bennett</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#364053"/><stop offset="1" stop-color="#111825"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0e1dd" stop-opacity=".32"/><stop offset=".6" stop-color="#e0e1dd" stop-opacity=".08"/><stop offset="1" stop-color="#e0e1dd" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#e0e1dd" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#e0e1dd" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="77.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#e0e1dd">STOIC</text>
+  <text x="150" y="116.2" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#e0e1dd">MORNINGS</text>
+  <text x="150" y="144.8" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#e0e1dd" fill-opacity=".8">PHILOSOPHY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.585) translate(0 -6)" color="#e0e1dd" stroke="currentColor" fill="none" stroke-width="1.77" stroke-linecap="round" stroke-linejoin="round"><path d="M-30 30 A30 30 0 0 1 30 30" fill="currentColor" fill-opacity=".25"/><path d="M-62 30 H62"/><path d="M0 -8 V-18 M-26 0 l-6 -6 M26 0 l6 -6 M-38 14 h-8 M38 14 h8"/><path d="M-54 30 V-20 M-44 30 V-20 M-58 -20 H-40 M-58 -26 H-40" /><path d="M-62 38 H62"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#e0e1dd" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#e0e1dd"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#e0e1dd">THOMAS BENNETT</text>
 </svg>

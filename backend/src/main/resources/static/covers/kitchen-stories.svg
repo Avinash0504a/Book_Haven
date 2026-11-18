@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Kitchen Stories by Meera Krishnan">
-  <rect width="300" height="450" fill="#0f4c5c"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#fb8b24" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#fb8b24">KITCHEN</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#fb8b24">STORIES</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#fb8b24" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#fb8b24">MEERA KRISHNAN</text>
+  <title>Kitchen Stories by Meera Krishnan</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c6170"/><stop offset="1" stop-color="#092f39"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fb8b24" stop-opacity=".32"/><stop offset=".6" stop-color="#fb8b24" stop-opacity=".08"/><stop offset="1" stop-color="#fb8b24" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#fb8b24" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#fb8b24" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="76.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#fb8b24">KITCHEN</text>
+  <text x="150" y="119.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#fb8b24">STORIES</text>
+  <text x="150" y="149.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#fb8b24" fill-opacity=".8">COOKERY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.685) translate(-6.5 3.5)" color="#fb8b24" stroke="currentColor" fill="none" stroke-width="1.66" stroke-linecap="round" stroke-linejoin="round"><path d="M-34 -8 H34 V22 Q34 38 18 38 H-18 Q-34 38 -34 22Z" fill="currentColor" fill-opacity=".25"/><path d="M-40 -8 H40 M-34 6 H-46 M34 6 H46 M0 -8 V-16"/><path d="M-10 -26 q6 -8 0 -16 M6 -26 q6 -8 0 -16"/><path d="M52 -30 L52 4"/><ellipse cx="52" cy="-36" rx="7" ry="9" fill="currentColor" fill-opacity=".25"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#fb8b24" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#fb8b24"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#fb8b24">MEERA KRISHNAN</text>
 </svg>

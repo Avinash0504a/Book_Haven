@@ -51,8 +51,8 @@ export default function WritersPage() {
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {following.map((writer) => (
-                <Card key={writer.id} className="p-4 flex items-center justify-between gap-4">
-                  <Link to={`/writers/${writer.slug}`} className="flex items-center gap-3 flex-1 min-w-0">
+                <Card key={writer.id} className="p-4 flex items-start justify-between gap-4">
+                  <Link to={`/writers/${writer.slug}`} className="flex items-start gap-3 flex-1 min-w-0">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-bg shrink-0">
                       {writer.imageUrl ? (
                         <img src={writer.imageUrl} alt={writer.name} className="w-full h-full object-cover" />
@@ -66,6 +66,9 @@ export default function WritersPage() {
                       <p className="font-semibold text-sm text-text hover:text-primary truncate">
                         {writer.name}
                       </p>
+                      {writer.bio && (
+                        <p className="text-xs text-muted mt-1 line-clamp-3 leading-relaxed">{writer.bio}</p>
+                      )}
                     </div>
                   </Link>
                   <FollowButton slug={writer.slug} following={true} />
@@ -102,9 +105,10 @@ export default function WritersPage() {
                       {writer.name}
                     </Link>
                     {writer.bio && (
-                      <p className="text-xs text-muted mt-1 line-clamp-2 leading-relaxed">
-                        {writer.bio}
-                      </p>
+                      <div className="mt-2">
+                        <p className="text-[11px] font-semibold uppercase tracking-wide text-text">About the writer</p>
+                        <p className="text-xs text-muted mt-1 line-clamp-4 leading-relaxed">{writer.bio}</p>
+                      </div>
                     )}
                   </div>
                 </div>

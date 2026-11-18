@@ -1,9 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Summer of Paper Planes by Daniel Brooks">
-  <rect width="300" height="450" fill="#4a1f3a"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#9be7c4" stroke-width="2"/>
-  <text x="150" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#9be7c4">SUMMER OF</text>
-  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#9be7c4">PAPER</text>
-  <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#9be7c4">PLANES</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#9be7c4" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#9be7c4">DANIEL BROOKS</text>
+  <title>Summer of Paper Planes by Daniel Brooks</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#603a52"/><stop offset="1" stop-color="#2e1324"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9be7c4" stop-opacity=".32"/><stop offset=".6" stop-color="#9be7c4" stop-opacity=".08"/><stop offset="1" stop-color="#9be7c4" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#9be7c4" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#9be7c4" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="61.7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#9be7c4">SUMMER</text>
+  <text x="150" y="95.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#9be7c4">OF PAPER</text>
+  <text x="150" y="130.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#9be7c4">PLANES</text>
+  <text x="150" y="157.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#9be7c4" fill-opacity=".8">YOUNG ADULT</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.556) translate(6.8 1.2)" color="#9be7c4" stroke="currentColor" fill="none" stroke-width="1.80" stroke-linecap="round" stroke-linejoin="round"><path d="M-30 0 L30 -22 L8 18 L0 4Z" fill="currentColor" fill-opacity=".25"/><path d="M-30 0 L0 4 L30 -22" transform="translate(0 0)"/><path transform="translate(-22 22) scale(.55)" d="M-30 0 L30 -22 L8 18 L0 4Z" fill="currentColor" fill-opacity=".25"/><path d="M-70 40 Q-40 30 -30 14" stroke-dasharray="3 6"/><path transform="translate(50 -36) scale(0.8)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#9be7c4" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#9be7c4"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#9be7c4">DANIEL BROOKS</text>
 </svg>

@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Lost Kitten by Emily Parker">
-  <rect width="300" height="450" fill="#1f3a5f"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f4d35e" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f4d35e">THE LOST</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f4d35e">KITTEN</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#f4d35e" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f4d35e">EMILY PARKER</text>
+  <title>The Lost Kitten by Emily Parker</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5272"/><stop offset="1" stop-color="#13243b"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4d35e" stop-opacity=".32"/><stop offset=".6" stop-color="#f4d35e" stop-opacity=".08"/><stop offset="1" stop-color="#f4d35e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f4d35e" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f4d35e" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="76.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#f4d35e">THE LOST</text>
+  <text x="150" y="119.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#f4d35e">KITTEN</text>
+  <text x="150" y="149.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#f4d35e" fill-opacity=".8">CHILDREN'S STORY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.744) translate(0 2)" color="#f4d35e" stroke="currentColor" fill="none" stroke-width="1.61" stroke-linecap="round" stroke-linejoin="round"><circle cy="8" r="30" fill="currentColor" fill-opacity=".25"/><path d="M-28 -10 L-26 -42 L-6 -24 M28 -10 L26 -42 L6 -24"/><circle cx="-11" cy="2" r="4" fill="currentColor" stroke="none"/><circle cx="11" cy="2" r="4" fill="currentColor" stroke="none"/><path d="M-3 14 H3 L0 18Z" fill="currentColor" stroke="none"/><path d="M0 18 q-6 8 -10 4 M0 18 q6 8 10 4"/><path d="M-34 10 H-56 M-34 18 L-54 26 M34 10 H56 M34 18 L54 26"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#f4d35e" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#f4d35e"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#f4d35e">EMILY PARKER</text>
 </svg>

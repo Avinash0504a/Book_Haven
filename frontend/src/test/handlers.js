@@ -520,6 +520,7 @@ export const handlers = [
           name: 'R. K. Narayan',
           slug: 'r-k-narayan',
           imageUrl: null,
+          bio: 'Celebrated Indian novelist known for Malgudi stories.',
           following: true
         }
       ],
@@ -554,6 +555,7 @@ export const handlers = [
           name: 'R. K. Narayan',
           slug: 'r-k-narayan',
           imageUrl: null,
+          bio: 'Celebrated Indian novelist known for Malgudi stories.',
           following: true
         }
       ],

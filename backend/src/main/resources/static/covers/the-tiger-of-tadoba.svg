@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Tiger of Tadoba by Sanjay Kulkarni">
-  <rect width="300" height="450" fill="#1f3a5f"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f4d35e" stroke-width="2"/>
-  <text x="150" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#f4d35e">THE TIGER</text>
-  <text x="150" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#f4d35e">OF TADOBA</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#f4d35e" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f4d35e">SANJAY KULKARNI</text>
+  <title>The Tiger of Tadoba by Sanjay Kulkarni</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5272"/><stop offset="1" stop-color="#13243b"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4d35e" stop-opacity=".32"/><stop offset=".6" stop-color="#f4d35e" stop-opacity=".08"/><stop offset="1" stop-color="#f4d35e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f4d35e" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f4d35e" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="77.8" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="33" font-weight="bold" fill="#f4d35e">THE TIGER</text>
+  <text x="150" y="115.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="33" font-weight="bold" fill="#f4d35e">OF TADOBA</text>
+  <text x="150" y="143.6" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#f4d35e" fill-opacity=".8">GRAPHIC NOVEL</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.744) translate(0 -2)" color="#f4d35e" stroke="currentColor" fill="none" stroke-width="1.61" stroke-linecap="round" stroke-linejoin="round"><circle cy="6" r="36" fill="currentColor" fill-opacity=".25"/><circle cx="-30" cy="-28" r="10" fill="currentColor" fill-opacity=".25"/><circle cx="30" cy="-28" r="10" fill="currentColor" fill-opacity=".25"/><path d="M-6 -30 v10 M0 -32 v14 M6 -30 v10 M-34 -6 h-10 M-34 4 h-12 M34 -6 h10 M34 4 h12"/><circle cx="-14" cy="-6" r="4" fill="currentColor" stroke="none"/><circle cx="14" cy="-6" r="4" fill="currentColor" stroke="none"/><path d="M-5 8 H5 L0 15Z" fill="currentColor" stroke="none"/><path d="M0 15 v5 M0 20 q-8 8 -14 2 M0 20 q8 8 14 2"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#f4d35e" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#f4d35e"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#f4d35e">SANJAY KULKARNI</text>
 </svg>

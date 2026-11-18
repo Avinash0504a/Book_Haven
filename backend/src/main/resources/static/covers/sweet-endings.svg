@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Sweet Endings by Meera Krishnan">
-  <rect width="300" height="450" fill="#5f2a1f"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f9e2b8" stroke-width="2"/>
-  <text x="150" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#f9e2b8">SWEET</text>
-  <text x="150" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#f9e2b8">ENDINGS</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#f9e2b8" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f9e2b8">MEERA KRISHNAN</text>
+  <title>Sweet Endings by Meera Krishnan</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#72443a"/><stop offset="1" stop-color="#3b1a13"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f9e2b8" stop-opacity=".32"/><stop offset=".6" stop-color="#f9e2b8" stop-opacity=".08"/><stop offset="1" stop-color="#f9e2b8" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f9e2b8" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f9e2b8" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="76.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#f9e2b8">SWEET</text>
+  <text x="150" y="119.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#f9e2b8">ENDINGS</text>
+  <text x="150" y="149.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#f9e2b8" fill-opacity=".8">COOKERY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.746) translate(0 -9.5)" color="#f9e2b8" stroke="currentColor" fill="none" stroke-width="1.60" stroke-linecap="round" stroke-linejoin="round"><path d="M-56 26 H56 Q50 42 0 42 Q-50 42 -56 26Z" fill="currentColor" fill-opacity=".25"/><circle cx="-24" cy="12" r="13" fill="currentColor" fill-opacity=".25"/><circle cx="2" cy="12" r="13" fill="currentColor" fill-opacity=".25"/><circle cx="28" cy="12" r="13" fill="currentColor" fill-opacity=".25"/><circle cx="-11" cy="-10" r="13" fill="currentColor" fill-opacity=".25"/><circle cx="15" cy="-10" r="13" fill="currentColor" fill-opacity=".25"/><circle cx="-24" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="2" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="28" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="-11" cy="-10" r="1.5" fill="currentColor" stroke="none"/><circle cx="15" cy="-10" r="1.5" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#f9e2b8" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#f9e2b8"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#f9e2b8">MEERA KRISHNAN</text>
 </svg>

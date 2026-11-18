@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Kaadina Rahasya by Arvind Swamy">
-  <rect width="300" height="450" fill="#1b263b"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#e0e1dd" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#e0e1dd">KAADINA</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#e0e1dd">RAHASYA</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#e0e1dd" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#e0e1dd">ARVIND SWAMY</text>
+  <title>Kaadina Rahasya by Arvind Swamy</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#364053"/><stop offset="1" stop-color="#111825"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e0e1dd" stop-opacity=".32"/><stop offset=".6" stop-color="#e0e1dd" stop-opacity=".08"/><stop offset="1" stop-color="#e0e1dd" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#e0e1dd" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#e0e1dd" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="76.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#e0e1dd">KAADINA</text>
+  <text x="150" y="119.4" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#e0e1dd">RAHASYA</text>
+  <text x="150" y="149.3" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#e0e1dd" fill-opacity=".8">A MYSTERY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.398) translate(-2 4.64)" color="#e0e1dd" stroke="currentColor" fill="none" stroke-width="2.00" stroke-linecap="round" stroke-linejoin="round"><path d="M-60 40 L-44 -2 L-28 40Z M-60 22 L-44 -22 L-28 22Z" fill="currentColor" fill-opacity=".25"/><path d="M-4 40 L14 -10 L32 40Z M-4 18 L14 -32 L32 18Z" fill="currentColor" fill-opacity=".25"/><path d="M36 40 L50 4 L64 40Z" fill="currentColor" fill-opacity=".25"/><path d="M-44 40 v6 M14 40 v6 M50 40 v6"/><circle cx="-12" cy="22" r="3" fill="currentColor" stroke="none"/><circle cx="-4" cy="22" r="3" fill="currentColor" stroke="none"/><path transform="translate(-6 -44) scale(0.45)" d="M10 -25 A25 25 0 1 0 30 12 A20 20 0 1 1 10 -25 Z" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#e0e1dd" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#e0e1dd"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#e0e1dd">ARVIND SWAMY</text>
 </svg>

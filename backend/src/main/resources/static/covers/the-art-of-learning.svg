@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Art of Learning by Raj Patel">
-  <rect width="300" height="450" fill="#7a1f2b"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f6e7cb" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f6e7cb">THE ART OF</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f6e7cb">LEARNING</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#f6e7cb" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f6e7cb">RAJ PATEL</text>
+  <title>The Art of Learning by Raj Patel</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a3a44"/><stop offset="1" stop-color="#4c131b"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f6e7cb" stop-opacity=".32"/><stop offset=".6" stop-color="#f6e7cb" stop-opacity=".08"/><stop offset="1" stop-color="#f6e7cb" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f6e7cb" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f6e7cb" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="78.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#f6e7cb">THE ART OF</text>
+  <text x="150" y="114.6" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#f6e7cb">LEARNING</text>
+  <text x="150" y="142.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#f6e7cb" fill-opacity=".8">SELF-HELP</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.596) translate(0 4)" color="#f6e7cb" stroke="currentColor" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="-44" y="22" width="88" height="18" rx="2" fill="currentColor" fill-opacity=".25"/><rect x="-36" y="4" width="76" height="18" rx="2" fill="currentColor" fill-opacity=".25"/><rect x="-40" y="-14" width="70" height="18" rx="2" fill="currentColor" fill-opacity=".25"/><path d="M-30 22 v18 M-26 4 v18 M-30 -14 v18"/><path transform="translate(0 -36) scale(1.5)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(-34 -34) scale(0.7)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/><path transform="translate(34 -30) scale(0.7)" d="M0 -8 Q1 -1 8 0 Q1 1 0 8 Q-1 1 -8 0 Q-1 -1 0 -8Z" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#f6e7cb" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#f6e7cb"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#f6e7cb">RAJ PATEL</text>
 </svg>

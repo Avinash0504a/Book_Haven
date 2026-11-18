@@ -1,9 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="The Moon and the Mango Tree by Emily Parker">
-  <rect width="300" height="450" fill="#14424f"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#ff9f43" stroke-width="2"/>
-  <text x="150" y="110" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ff9f43">THE MOON</text>
-  <text x="150" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ff9f43">AND THE</text>
-  <text x="150" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="#ff9f43">MANGO TREE</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#ff9f43" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#ff9f43">EMILY PARKER</text>
+  <title>The Moon and the Mango Tree by Emily Parker</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#305964"/><stop offset="1" stop-color="#0c2931"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9f43" stop-opacity=".32"/><stop offset=".6" stop-color="#ff9f43" stop-opacity=".08"/><stop offset="1" stop-color="#ff9f43" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#ff9f43" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#ff9f43" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="62.6" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="bold" fill="#ff9f43">THE MOON</text>
+  <text x="150" y="95.7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="bold" fill="#ff9f43">AND THE</text>
+  <text x="150" y="128.7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="bold" fill="#ff9f43">MANGO TREE</text>
+  <text x="150" y="155.6" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#ff9f43" fill-opacity=".8">CHILDREN'S STORY</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.379) translate(3.75 9.4)" color="#ff9f43" stroke="currentColor" fill="none" stroke-width="2.03" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(30 -42) scale(0.75)" d="M10 -25 A25 25 0 1 0 30 12 A20 20 0 1 1 10 -25 Z" fill="currentColor" stroke="none"/><path d="M-14 40 V6" stroke-width="5"/><circle cx="-14" cy="-10" r="30" fill="currentColor" fill-opacity=".25"/><ellipse cx="-24" cy="-4" rx="5" ry="7" fill="currentColor" stroke="none"/><ellipse cx="-4" cy="-14" rx="5" ry="7" fill="currentColor" stroke="none"/><ellipse cx="-12" cy="8" rx="5" ry="7" fill="currentColor" stroke="none"/><path d="M-60 42 H40"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#ff9f43" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#ff9f43"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#ff9f43">EMILY PARKER</text>
 </svg>

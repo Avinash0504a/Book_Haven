@@ -54,6 +54,7 @@ public class AuthorService {
             a.getName(),
             a.getSlug(),
             a.getImageUrl(),
+            a.getBio(),
             currentMemberId != null ? followedIds.contains(a.getId()) : null))
         .toList();
   }
@@ -88,7 +89,7 @@ public class AuthorService {
         .map(f -> authorRepository.findById(f.getAuthorId()))
         .filter(java.util.Optional::isPresent)
         .map(java.util.Optional::get)
-        .map(a -> new AuthorDto(a.getId(), a.getName(), a.getSlug(), a.getImageUrl(), true))
+        .map(a -> new AuthorDto(a.getId(), a.getName(), a.getSlug(), a.getImageUrl(), a.getBio(), true))
         .toList();
   }
 

@@ -2,7 +2,7 @@ import { useAuth } from '../../auth/hooks/useAuth';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useToggleWishlist } from '../hooks/useWishlist';
 
-export default function WishlistButton({ bookId, inWishlist = false, className = '' }) {
+export default function WishlistButton({ bookId, inWishlist = false, className = '', showLabel = false }) {
   const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -27,10 +27,12 @@ export default function WishlistButton({ bookId, inWishlist = false, className =
       disabled={toggleMutation.isPending}
       aria-label={inWishlist ? 'Remove from wishlist' : 'Add to wishlist'}
       title={inWishlist ? 'Remove from wishlist' : 'Add to wishlist'}
-      className={`p-2 rounded-full transition-colors flex items-center justify-center ${
+      className={`${
+        showLabel ? 'px-4 py-2 rounded-md gap-2 text-sm font-medium border border-border' : 'p-2 rounded-full'
+      } transition-colors flex items-center justify-center ${
         inWishlist
           ? 'text-danger bg-danger/10 hover:bg-surface'
-          : 'text-muted hover:text-primary bg-surface/80 hover:bg-surface shadow-sm'
+          : 'text-text hover:text-primary bg-surface/80 hover:bg-surface shadow-sm'
       } ${className}`}
     >
       <svg
@@ -46,6 +48,7 @@ export default function WishlistButton({ bookId, inWishlist = false, className =
           d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
         />
       </svg>
+      {showLabel && <span aria-hidden="true">{inWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'}</span>}
     </button>
   );
 }

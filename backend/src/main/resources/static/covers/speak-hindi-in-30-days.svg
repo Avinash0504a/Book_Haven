@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-label="Speak Hindi in 30 Days by Neha Gupta">
-  <rect width="300" height="450" fill="#1f3a5f"/>
-  <rect x="14" y="14" width="272" height="422" fill="none" stroke="#f4d35e" stroke-width="2"/>
-  <text x="150" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f4d35e">SPEAK HINDI IN</text>
-  <text x="150" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#f4d35e">30 DAYS</text>
-  <line x1="90" y1="330" x2="210" y2="330" stroke="#f4d35e" stroke-width="2"/>
-  <text x="150" y="375" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f4d35e">NEHA GUPTA</text>
+  <title>Speak Hindi in 30 Days by Neha Gupta</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5272"/><stop offset="1" stop-color="#13243b"/></linearGradient>
+    <radialGradient id="glow" cx="150" cy="262" r="140" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f4d35e" stop-opacity=".32"/><stop offset=".6" stop-color="#f4d35e" stop-opacity=".08"/><stop offset="1" stop-color="#f4d35e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#bg)"/>
+  <rect width="300" height="450" fill="url(#glow)"/>
+  <rect x="12" y="12" width="276" height="426" fill="none" stroke="#f4d35e" stroke-width="1.6"/>
+  <rect x="18" y="18" width="264" height="414" fill="none" stroke="#f4d35e" stroke-opacity=".35" stroke-width="1"/>
+  <text x="150" y="79.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="bold" fill="#f4d35e">SPEAK HINDI</text>
+  <text x="150" y="112.2" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="bold" fill="#f4d35e">IN 30 DAYS</text>
+  <text x="150" y="139.1" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" fill="#f4d35e" fill-opacity=".8">LANGUAGE GUIDE</text>
+  <!--art-->
+  <g id="art" transform="translate(150 262) scale(1.442) translate(1 -7)" color="#f4d35e" stroke="currentColor" fill="none" stroke-width="1.94" stroke-linecap="round" stroke-linejoin="round"><rect x="-58" y="-42" width="76" height="40" rx="14" fill="currentColor" fill-opacity=".25"/><path d="M-40 -2 L-46 12 L-26 -2"/><rect x="-20" y="4" width="76" height="40" rx="14" fill="currentColor" fill-opacity=".25"/><path d="M36 44 L44 56 L26 44"/><circle cx="-42" cy="-22" r="2.5" fill="currentColor" stroke="none"/><circle cx="-30" cy="-22" r="2.5" fill="currentColor" stroke="none"/><circle cx="-18" cy="-22" r="2.5" fill="currentColor" stroke="none"/><circle cx="-2" cy="24" r="2.5" fill="currentColor" stroke="none"/><circle cx="10" cy="24" r="2.5" fill="currentColor" stroke="none"/><circle cx="22" cy="24" r="2.5" fill="currentColor" stroke="none"/></g>
+  <!--/art-->
+  <path d="M82 378 H138 M162 378 H218" stroke="#f4d35e" stroke-width="1.5"/>
+  <path d="M150 372 l6 6 l-6 6 l-6 -6z" fill="#f4d35e"/>
+  <text x="150" y="405.9" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="1.2" fill="#f4d35e">NEHA GUPTA</text>
 </svg>

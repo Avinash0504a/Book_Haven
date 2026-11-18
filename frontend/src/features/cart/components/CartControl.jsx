@@ -60,7 +60,7 @@ export function CartControl({ book, size = 'md', className = '' }) {
 
   if (isOutOfStock) {
     return (
-      <div className={`text-xs text-muted font-medium py-1.5 ${className}`}>
+      <div className={`text-xs text-danger font-semibold py-1.5 ${className}`}>
         Out of Stock
       </div>
     );

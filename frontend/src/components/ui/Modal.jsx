@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 import { Button } from './Button.jsx';
 
@@ -32,7 +33,9 @@ export function Modal({
 
   if (!isOpen) return null;
 
-  return (
+  // Rendered into document.body so an ancestor with a filter/backdrop-filter/transform
+  // (such as the sticky blurred header) cannot turn "fixed" into "fixed to that ancestor".
+  return createPortal(
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
@@ -65,6 +68,7 @@ export function Modal({
         </div>
         <div className="px-6 py-4 max-h-[80vh] overflow-y-auto">{children}</div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
